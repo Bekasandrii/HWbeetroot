@@ -1,0 +1,33 @@
+body {
+  background-color: #fff;
+}
+header {
+  background-color: black;
+  color: #fff;
+  display: block;
+  width: 200px;
+  padding: 40px 200px;
+  text-align: center;
+}
+.title {
+  font-size: 25px;
+}
+.shopping-list {
+  padding: 40px 200px;
+  width: 200px;
+  background-color: olivedrab;
+}
+/* .bought:checked {
+  text-decoration: line-through;
+} */
+.bought:checked + label {
+  color: #fff;
+  text-decoration: line-through;
+}
+footer {
+  padding: 40px 200px;
+  width: 200px;
+  background-color: black;
+  color: olivedrab;
+  text-align: center;
+}

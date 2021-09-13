@@ -1,0 +1,37 @@
+body {
+  background-color: #fff;
+}
+section {
+  font-size: 18px;
+  margin: 30px;
+}
+.title {
+  text-align: center;
+  font-size: 30px;
+  background-color: rgb(175, 29, 29);
+  color: #fff;
+}
+.mane-immage {
+  text-align: center;
+  width: 100%;
+  height: 350px;
+}
+.important-info {
+  text-align: center;
+}
+.car-pictures {
+  text-align: center;
+}
+.car {
+  margin: 20px;
+  border: 5px dotted #000;
+}
+.bottom-part {
+  text-align: center;
+}
+.copyright {
+  text-align: center;
+  background-color: black;
+  color: #fff;
+  font-size: 20px;
+}

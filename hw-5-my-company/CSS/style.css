@@ -1,0 +1,29 @@
+body {
+  background-color: rgb(153, 13, 0);
+}
+header {
+  text-align: center;
+}
+nav {
+  display: inline-flex;
+  background-color: black;
+  padding: 50px;
+  text-align: center;
+}
+a {
+  color: #fff;
+}
+.menu-left {
+  background-color: rgb(125, 12, 1);
+  box-sizing: border-box;
+  width: 25%;
+  margin-top: 10px;
+}
+.section-3 {
+  display: inline-flex;
+  box-sizing: border-box;
+}
+/* p {
+  box-sizing: border-box;
+  width: 50%;
+} */

@@ -1,0 +1,22 @@
+.facebook {
+  fill: brown;
+  /* stroke: black; */
+  /* display: block;
+  width: 40px;
+  height: 40px; */
+}
+.facebook:hover {
+  fill: chartreuse;
+}
+.creditcard {
+}
+.crown {
+  fill: black;
+}
+.key:hover {
+  -webkit-transform: rotate(50deg);
+  fill: blue;
+}
+.utube:hover {
+  transform: scale(1.1, 1.1);
+}
