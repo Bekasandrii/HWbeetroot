@@ -53,6 +53,7 @@ header .button-sign-up {
   height: 40px;
   border-radius: 4px;
 }
+/* Main container section 1 left side */
 main .section-1-left {
   position: absolute;
   width: 518px;
@@ -101,6 +102,8 @@ main .section-1-button-right {
   color: #ff9900;
 }
 
+/* Main container section 1 image right side */
+
 main .section-1-image {
   position: absolute;
   width: 605px;
@@ -108,6 +111,9 @@ main .section-1-image {
   left: 608px;
   top: 178px;
 }
+
+/* Main container section 2 */
+
 main .section-2 {
   padding-top: 250px;
 }
@@ -144,6 +150,9 @@ main .section-2-btn {
   font-size: 14px;
   border-radius: 4px;
 }
+
+/* Main container section 3 */
+
 main .section-3 {
   display: block;
   width: 1110px;
@@ -162,4 +171,21 @@ main .section-3-image {
   height: 572px;
   left: 735px;
   top: 1397px;
+}
+
+/* Main container section 4 */
+
+main .section-4 {
+  /* width: 1120px;
+  height: 520px;
+  top: 1500px;
+  left: 144px; */
+}
+main .section-4-img {
+  width: 535px;
+  height: 531px;
+}
+main .section-4-right {
+  width: 486px;
+  height: 427px;
 }
