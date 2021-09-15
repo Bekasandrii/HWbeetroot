@@ -1,0 +1,49 @@
+body {
+  background-color: #fff;
+}
+header {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 50px;
+}
+header p {
+  font-size: 14px;
+  font-weight: normal;
+}
+header h1 {
+  width: 50%;
+  margin: 0 auto;
+  color: #0ec8cb;
+  font-size: 40px;
+  font-weight: bold;
+}
+header p:last-child {
+  padding: 2% 30%;
+  font-size: 20px;
+  font-weight: normal;
+  color: #999;
+}
+section {
+  font-size: 0;
+}
+section div {
+  display: inline-block;
+  width: 25%;
+  font-size: 16px;
+  background-color: #d43a3a;
+  text-align: center;
+  padding: 15px;
+  box-sizing: border-box;
+  min-height: 300px;
+  max-height: 500px;
+  height: 100%;
+  vertical-align: top;
+}
+section div svg {
+  height: 64px;
+}
+
+section div h2 {
+}
+section div p {
+}

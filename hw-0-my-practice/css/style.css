@@ -54,7 +54,7 @@ header .button-sign-up {
   border-radius: 4px;
 }
 /* Main container section 1 left side */
-main .section-1-left {
+/* main .section-1-left {
   position: absolute;
   width: 518px;
   height: 352px;
@@ -100,25 +100,24 @@ main .section-1-button-right {
   width: 161px;
   height: 23px;
   color: #ff9900;
-}
+} */
 
 /* Main container section 1 image right side */
 
-main .section-1-image {
+/* main .section-1-image {
   position: absolute;
   width: 605px;
   height: 494.83px;
   left: 608px;
   top: 178px;
-}
+} */
 
 /* Main container section 2 */
 
-main .section-2 {
+/* main .section-2 {
   padding-top: 250px;
 }
 main .section-2-title {
-  /* position: relative; */
   padding-top: 20px;
   width: 540px;
   height: 110px;
@@ -149,11 +148,11 @@ main .section-2-btn {
   border: none;
   font-size: 14px;
   border-radius: 4px;
-}
+} */
 
 /* Main container section 3 */
 
-main .section-3 {
+/* main .section-3 {
   display: block;
   width: 1110px;
   height: 580px;
@@ -171,7 +170,7 @@ main .section-3-image {
   height: 572px;
   left: 735px;
   top: 1397px;
-}
+} */
 
 /* Main container section 4 */
 
@@ -181,11 +180,72 @@ main .section-4 {
   top: 1500px;
   left: 144px; */
 }
-main .section-4-img {
+/* main .section-4-img {
   width: 535px;
   height: 531px;
 }
 main .section-4-right {
   width: 486px;
   height: 427px;
+} */
+
+/* Main container section 1 left side*/
+main .section-1 {
+  padding-top: 50px;
+  /* text-align: center; */
+  vertical-align: middle;
+}
+main .section-1-left {
+  display: inline-block;
+  /* vertical-align: middle; */
+  width: 518px;
+  /* height: 352px; */
+  margin-top: 5px;
+  padding-top: 30px;
+}
+main .section-1-title {
+  font-weight: bold;
+  font-size: 44px;
+  line-height: 54px;
+  color: #2f281e;
+}
+main .section-1-description {
+  position: relative;
+  width: 458px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #544837;
+}
+main .section-1-button-left {
+  font-weight: bold;
+  position: relative;
+  width: 175px;
+  height: 53px;
+  background: #ff9900;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+main .section-1-button-play {
+  position: relative;
+  width: 20px;
+  height: 17px;
+}
+
+main .section-1-button-right {
+  position: relative;
+  width: 161px;
+  height: 23px;
+  color: #ff9900;
+}
+main .section-1-image {
+  /* position: absolute;
+  float: right; */
+  display: inline-block;
+  /* vertical-align: middle; */
+  width: 605px;
+  height: 495px;
 }
