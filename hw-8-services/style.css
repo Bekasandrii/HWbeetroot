@@ -1,0 +1,34 @@
+/* .Shape_189 {
+  border-radius: 50%;
+  background-color: rgb(18, 117, 185);
+  position: absolute;
+  left: 1062px;
+  top: 56px;
+  width: 65px;
+  height: 63px;
+  z-index: 13;
+}
+.Dashboard {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 1081px;
+  top: 74px;
+  width: 28px;
+  height: 24px;
+  z-index: 14; */
+}
+section {
+  width: 300px;
+  margin: 0 auto;
+  display: inline-block;
+}
+.csl-1 {
+
+  fill: #1275b9;
+}
+.cls-1:hover {
+  fill: blue;
+  
+}
+
+ 
