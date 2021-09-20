@@ -42,12 +42,8 @@ header .button-sign-up {
   height: 40px;
   border-radius: 4px;
 }
-
-main section,
-footer {
-}
-
 /* Main container section 1 left side*/
+
 .section-1 {
   /* text-align: center; */
   vertical-align: middle;
@@ -151,27 +147,23 @@ main .section-3-left {
   vertical-align: middle;
   width: 48%;
   height: 145px;
-
-  /* margin-top: 5px;
-  padding-top: 30px; */
 }
 main .section-3-img {
   vertical-align: middle;
   width: 50%;
   height: 572px;
   float: left;
-  /* left: 735px;
-  top: 1397px; */
 }
 /* Main container section 4 */
 
 main .section-4 {
+  display: block;
   vertical-align: middle;
   margin: 70px 150px;
 }
 main .section-4-img {
   width: 50%;
-  height: 531px;
+  height: 521;
 }
 main .section-4-right {
   width: 48%;
@@ -183,8 +175,8 @@ main .section-4-right-title {
   line-height: 54px;
   color: #2f281e;
 }
-main .section-4-right-list {
+/* main .section-4-right-list {
 }
 
 main .section-4-right-list-description {
-}
+} */
