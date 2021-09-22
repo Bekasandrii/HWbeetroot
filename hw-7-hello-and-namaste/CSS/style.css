@@ -1,5 +1,5 @@
 body {
-  background-color: #fff;
+  background-color: #ffe5e5;
 }
 header {
   text-transform: uppercase;
@@ -24,26 +24,42 @@ header p:last-child {
   color: #999;
 }
 section {
+  width: 100%;
   font-size: 0;
+  padding: 10px;
 }
-section div {
+section figure {
   display: inline-block;
-  width: 25%;
-  font-size: 16px;
-  background-color: #f1e9e9;
+  width: 24.7%;
+  height: 415px;
+  background-color: #f8dede;
   text-align: center;
-  padding: 15px;
+  padding-top: 80px;
   box-sizing: border-box;
-  min-height: 300px;
+  min-height: 400px;
   max-height: 500px;
   height: 100%;
   vertical-align: top;
+  margin: 10px 0;
 }
-section div svg {
+section figure:hover {
+  background-color: #27b4b6;
+  color: #f8dede;
+}
+section figure svg {
   height: 64px;
+  color: #321818;
 }
-
-section div h2 {
+svg:hover {
+  color: #f8dede;
 }
-section div p {
+section figure h2 {
+  font-size: 20px;
+  color: #958089;
+  padding: 15px 60px;
+}
+section figure figcaption {
+  font-size: 16px;
+  color: #b59b9b;
+  padding: 0 55px;
 }
