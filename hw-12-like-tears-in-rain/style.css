@@ -1,0 +1,112 @@
+main {
+  background-color: #464f54;
+  padding: 50px;
+}
+header {
+  margin-bottom: -8%;
+  z-index: 1;
+  position: relative;
+}
+.heading {
+  background-color: #181818;
+  margin-top: 50px;
+  margin-left: 320px;
+  padding: 30px 40px;
+
+  /* color: #fefefe; */
+}
+.heading__subtitle {
+  color: #777777;
+  font-size: 15px;
+  font-family: "Proxima Nova";
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.heading__subtitle--fs {
+}
+.heading__title {
+  color: #fefefe;
+  font-size: 40px;
+  font-weight: 400;
+  font-family: "Playfair Display";
+  padding-bottom: 3px;
+  border-bottom: 3px solid #303030;
+  position: relative;
+}
+.heading__title::after {
+  background-color: #afb1b3;
+  content: "";
+  width: 3px;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0%;
+  right: 65%;
+}
+.icons__list {
+  background-color: #efb72b;
+  width: 75%;
+  padding: 30px;
+  margin-left: auto;
+}
+
+.icons__list__item {
+  text-decoration: none;
+  margin: 20px;
+}
+.icons__list__item:hover .csl-1 {
+  background-color: #fefefe;
+}
+.article {
+  background-color: #fefefe;
+  padding: 7%;
+  position: relative;
+  padding-top: 185px;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  box-shadow: #333d42;
+}
+.article::before {
+  background-color: #e8eced;
+  content: "";
+  width: 4px;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 60px;
+}
+.article__author {
+  color: #b5b5b5;
+  font-size: 20px;
+  font-family: "Proxima Nova";
+  letter-spacing: 4px;
+  margin-bottom: 40px;
+}
+.article__title {
+  color: #2a2a2a;
+  font-size: 78px;
+  font-family: "Futura PT";
+  line-height: 74px;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+.article__annotation {
+  color: #8f8f8f;
+  font-size: 30px;
+  font-family: "Georgia";
+  line-height: 62px;
+}
+.article__text {
+  color: #555555;
+  font-size: 27px;
+  font-family: "Georgia";
+  line-height: 40px;
+}
+.article__cursive {
+  color: #000000;
+  font-size: 27px;
+  font-family: "Georgia";
+  font-style: italic;
+  line-height: 40px;
+}

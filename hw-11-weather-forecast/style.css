@@ -127,3 +127,6 @@ main ul .sydney {
 main .section-3-footer {
   color: #fff;
 }
+* {
+  transition: all 0.1s ease-in;
+}
