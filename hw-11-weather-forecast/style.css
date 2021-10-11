@@ -46,12 +46,21 @@ main ul li svg {
 main ul li p svg {
   display: inline-block;
 }
+
+main ul {
+}
 main ul .lisbon {
   background-color: #3399cc;
   width: 50%;
   color: #fff;
   box-sizing: border-box;
   border: 2px solid white;
+}
+main ul:hover .lisbon {
+  /* transition: all 0.1s ease-in; */
+  color: #3399cc;
+  background-color: #fff;
+  opacity: 0.3;
 }
 main ul .paris {
   background-color: #33cccc;
