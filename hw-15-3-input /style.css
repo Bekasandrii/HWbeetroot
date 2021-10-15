@@ -1,0 +1,17 @@
+body {
+  background-color: rgb(168, 168, 245);
+  margin: 30px;
+}
+.email__password {
+  float: right;
+  margin: 20px;
+}
+.input__phone {
+  display: block;
+}
+.input__birthday {
+  margin: 20px 0;
+}
+.select__country {
+  margin: 20px 0;
+}
