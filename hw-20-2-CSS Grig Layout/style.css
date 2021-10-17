@@ -1,0 +1,176 @@
+body {
+  background-color: #fff;
+}
+
+/* header */
+
+header {
+  margin: 50px 100px;
+}
+.header__logo {
+}
+.header__menu {
+  float: right;
+}
+.header__menu__link {
+  margin: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #111111;
+}
+
+/* Section 1 introduction */
+
+.intro {
+  display: inline-block;
+  margin: 30px 100px;
+}
+.intro__left {
+  display: inline-block;
+  width: 50%;
+}
+.intro__description {
+  text-decoration: none;
+  font-size: 22px;
+  color: #4a4ff2;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-right: 205px;
+}
+.intro__title {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 60px;
+  color: #111111;
+  font-weight: 700;
+  margin: 20px 0;
+  padding-right: 85px;
+}
+.intro__title__link {
+  text-decoration: none;
+  color: #4a4ff2;
+}
+.intro__right {
+  float: right;
+  width: 50%;
+  text-align: center;
+}
+.intro__text {
+  font-size: 18px;
+  color: #111111;
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 200px;
+}
+.intro__text::before {
+  background-color: black;
+  content: "";
+  width: 50px;
+  height: 3px;
+  display: block;
+  position: absolute;
+  top: 67%;
+  left: 940px;
+}
+
+/* Section 2 grid for pics */
+
+.section__pictures {
+  margin: 0 100px;
+}
+.wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "picture_1 picture_2 picture_3"
+    "picture_4 picture_5 picture_6"
+    "picture_7 picture_8 picture_9"
+    "picture_10 picture_11 picture_12";
+  gap: 10px;
+}
+.wrap div {
+  overflow: hidden;
+  position: relative;
+}
+.wrap img {
+  width: 100%;
+}
+/* .picture_1 {
+  grid-area: picture_1;
+}
+.picture_2 {
+  grid-area: picture_2;
+}
+.picture_3 {
+  grid-area: picture_3;
+}
+.picture_4 {
+  grid-area: picture_4;
+}
+.picture_5 {
+  grid-area: picture_5;
+}
+.picture_6 {
+  grid-area: picture_6;
+}
+.picture_7 {
+  grid-area: picture_7;
+}
+.picture_8 {
+  grid-area: picture_8;
+}
+.picture_9 {
+  grid-area: picture_9;
+}
+.picture_10 {
+  grid-area: picture_10;
+}
+.picture_11 {
+  grid-area: picture_11;
+}
+.picture_12 {
+  grid-area: picture_12;
+} */
+
+/* Section 3 grid services */
+.section__servises {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-areas: "services__text services__links services__links";
+  margin: 20px 100px;
+  gap: 40px;
+}
+.section__servises li a {
+  text-decoration: none;
+  color: #707070;
+}
+.section__servises li {
+  list-style-type: none;
+}
+.services__text {
+}
+.services__links {
+  font-size: 18px;
+  color: #111111;
+}
+.section__servises::after {
+  background-color: black;
+  content: "";
+  height: 3px;
+  display: block;
+  position: relative;
+}
+
+/* Section 4 grid awards */
+
+.section__awards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "awards__title awards__subtitle awards__info awards__year"
+    "awards__subtitle awards__info awards__year";
+  margin: 20px 100px;
+  gap: 40px;
+}

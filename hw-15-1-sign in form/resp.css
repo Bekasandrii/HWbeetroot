@@ -1,0 +1,28 @@
+@media (max-width: 667px) {
+  .modal {
+    padding: 15px;
+  }
+  .modal__panel {
+    padding: 30px;
+    margin-bottom: 15px;
+  }
+  .form__advanced {
+    flex-direction: column;
+  }
+  .form__link {
+    text-align: center;
+  }
+  .form__link + .form__link {
+    margin-top: 15px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 667px) {
+  .modal {
+    display: block;
+    text-align: center;
+  }
+  .modal__panel {
+    display: inline-block;
+  }
+}

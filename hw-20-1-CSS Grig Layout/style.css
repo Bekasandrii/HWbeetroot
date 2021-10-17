@@ -1,0 +1,103 @@
+body {
+  background-color: #fff;
+  width: 100%;
+}
+/* Section 1 grid for pics  */
+.upper {
+  margin: 50px;
+}
+.wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 300px) 500px;
+  grid-template-areas:
+    "picture_1 picture_1 picture_2"
+    "picture_1 picture_1 picture_3"
+    "picture_4 picture_5 picture_6";
+  gap: 20px;
+}
+.wrap div {
+  overflow: hidden;
+  position: relative;
+}
+.wrap img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: right;
+}
+.picture_1 {
+  grid-area: picture_1;
+}
+.picture_2 {
+  grid-area: picture_2;
+}
+.picture_3 {
+  grid-area: picture_3;
+}
+.picture_4 {
+  grid-area: picture_4;
+}
+.picture_5 {
+  grid-area: picture_5;
+}
+.picture_6 {
+  grid-area: picture_6;
+}
+
+/* Section 2 grig for pics + insta */
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.inner {
+  position: relative;
+  padding-top: 100%;
+  overflow: hidden;
+}
+
+.inner:after {
+  position: absolute;
+  content: "";
+  background: rgba(243, 236, 235, 0.62);
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+i {
+  position: absolute;
+  color: rgb(245, 35, 35);
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  font-size: 150px;
+  transition: 0.3s;
+}
+
+.inner:hover:after {
+  opacity: 1;
+}
+
+.inner:hover i {
+  transform: translate(-50%, -50%) scale(1);
+}
