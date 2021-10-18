@@ -7,8 +7,7 @@ body {
 header {
   margin: 50px 100px;
 }
-.header__logo {
-}
+
 .header__menu {
   float: right;
 }
@@ -89,12 +88,14 @@ header {
     "picture_10 picture_11 picture_12";
   gap: 10px;
 }
-.wrap div {
-  overflow: hidden;
-  position: relative;
-}
 .wrap img {
   width: 100%;
+}
+.immage_10 {
+  height: 633px;
+}
+.immage_11 {
+  height: 692px;
 }
 .picture_1 {
   grid-area: picture_1;
@@ -177,17 +178,40 @@ header {
   grid-area: text-2;
 }
 .text-3 {
+  margin: 0 70px;
   grid-area: text-3;
 }
 .text-4 {
+  margin-left: 130px;
   grid-area: text-4;
 }
 .text-5 {
   grid-area: text-5;
 }
 .text-6 {
+  margin: 0 70px;
   grid-area: text-6;
 }
 .text-7 {
+  margin-left: 130px;
   grid-area: text-7;
+}
+footer {
+  margin: 50px 100px;
+}
+.footer__menu {
+  float: right;
+}
+footer .menu__link {
+  margin: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #111111;
+}
+footer .menu__icon {
+  text-decoration: none;
+  margin: 10px;
+}
+footer svg {
+  fill: #4a4ff2;
 }
