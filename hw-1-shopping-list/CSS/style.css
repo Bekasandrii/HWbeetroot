@@ -11,7 +11,7 @@ header .title {
   font-size: 25px;
 }
 
-main .shopping-list {
+.shopping-list {
   display: block;
   width: 50%;
   color: #fff;
@@ -25,9 +25,11 @@ main div {
 }
 main div:hover {
   background-color: #625e77;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
 }
 
-main .shopping-list-text {
+.shopping-list-text {
   font-size: 20px;
 }
 .shopping-list-item:nth-child(even) {
@@ -35,11 +37,11 @@ main .shopping-list-text {
 }
 q::before {
   content: "(";
-  color: #eb7e7f;
+  color: white;
 }
 q::after {
   content: ")";
-  color: #eb7e7f;
+  color: white;
 }
 .shopping-list-bought:checked + label {
   color: #fff;
@@ -51,5 +53,5 @@ footer {
   background-color: #4a4f56;
   text-align: center;
   color: #eb7e7f;
-  margin: 40px 550px;
+  margin: 40px 333px;
 }

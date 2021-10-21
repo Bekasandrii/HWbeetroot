@@ -3,25 +3,19 @@ html {
 body {
   background-color: #fff;
   font-family: "Poppins", sans-serif;
-  width: 100%;
+  
 }
 header {
   margin: 50px 150px;
 }
-.logo {
-}
-.logo__icon {
-}
-.logo__name {
-}
+
 .header__menu {
   float: right;
 }
 .header__menu__link {
   margin: 20px;
 }
-.header__buttons {
-}
+
 .header__buttons__signin {
   font-style: normal;
   font-weight: 600;
@@ -55,14 +49,12 @@ header {
 /* Main container section 1 */
 
 .section__1 {
-  display: inline-block;
-  /* display: flex; */
-  margin: 50px 150px;
+  display: inline-flex;
 }
 .section__1__info {
   display: inline-block;
-  width: 46%;
-  margin: 50px 100px;
+  width: 50%;
+  margin-left: 100px;
 }
 .section__1__title {
   font-weight: bold;
@@ -105,10 +97,9 @@ header {
   height: 23px;
   color: #ff9900;
 }
-.section__1__img {
+.section__1__right {
   float: right;
   width: 50%;
-  position: absolute;
 }
 /* Main container section 2  */
 

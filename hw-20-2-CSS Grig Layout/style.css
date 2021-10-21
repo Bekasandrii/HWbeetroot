@@ -62,13 +62,13 @@ header {
   margin-top: 200px;
 }
 .intro__text::before {
-  background-color: black;
+  background-color: #707070;
   content: "";
   width: 50px;
   height: 3px;
   display: block;
   position: absolute;
-  top: 67%;
+  top: 60%;
   left: 940px;
 }
 
