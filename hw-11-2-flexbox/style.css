@@ -1,0 +1,49 @@
+body {
+    background-color: #1a0000;
+}
+.coffee__cups {
+    display: flex;
+    justify-content: center;
+    margin: 80px auto;
+    background-color: #fdde7e;
+    width: 1200px;
+    height: 600px;
+
+}
+.panel {
+    display: block;
+    text-align: center;
+    background-color: white;
+    margin: auto 10px;
+    width: 25%;
+    height: 440px;
+}
+.panel--big {
+    display: block;
+    text-align: center;
+    background-color: white;
+    margin: auto 10px;
+    width: 25%;
+    height: 500px;
+}
+.panel__cost {
+    font-size: 70px;
+    letter-spacing: 2px;
+    line-height: 24px;
+    color: #02995b;
+}
+.panel__svg {
+
+}
+.panel__info {
+    margin-top: 50px;
+    padding: 0 60px;
+}
+.panel__title {
+    color: black;
+
+}
+.panel__subtitle {
+    color: #4e4e4e;
+
+}
