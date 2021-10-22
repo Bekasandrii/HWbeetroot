@@ -1,0 +1,70 @@
+
+body {
+    background-color: #d7d4d4;
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 100px;
+    width: 100%;
+
+
+}
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+
+ }
+.panel__big {
+    display: block;
+    margin: 20px;
+    background-image: url("./IMG/Red_Car.jpg");
+}
+.panel__image--big {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+.panel__big__date {
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 13px;
+    line-height: 30px;
+    color: #ffffff;
+    font-weight: 500;
+    top: 430px;
+    width: 20%;
+
+}
+.panel__big__title {
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 30px;
+    line-height: 36px;
+    color: #ffffff;
+    top: 455px;
+    width: 25%;
+}
+
+.panel {
+    text-transform: uppercase;
+    display: block;
+    background-color: white;
+    margin: 18px;
+    width: 25%;
+    height: 540px;
+}
+.panel__profile {
+    margin-top: 80px;
+}
+.wrapper {
+    margin: 0 65px 0 25px;
+}
+
+
+
+
