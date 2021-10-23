@@ -1,11 +1,21 @@
+
 body {
   background-color: #fff;
   font-family: "Poppins", sans-serif;
 }
 
-header {
+.header {
   margin: 50px 150px;
+  background: #0ec8cb !important;
+  &:after {
+    
+  }
+  .__menu {
+
+    float: right;
+  }
 }
+
 
 .header__menu {
   float: right;
@@ -48,14 +58,17 @@ header {
 }
 
 /* Main container section 1 */
+
 .section__1 {
   display: inline-block;
   margin: 50px 150px;
+;
 }
 
 .section__1__info {
   display: inline-block;
   width: 50%;
+
 }
 
 .section__1__title {
@@ -107,9 +120,11 @@ header {
 .section__1__right {
   float: right;
   width: 50%;
+
 }
 
 /* Main container section 2  */
+
 .section__2 {
   display: inline-block;
   vertical-align: middle;
@@ -130,8 +145,6 @@ header {
 }
 
 .section__2__grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -180,11 +193,10 @@ header {
 }
 
 /* Main container section 3 */
+
 .section__3 {
   display: inline-block;
   margin: 50px 150px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -227,11 +239,10 @@ header {
 }
 
 /* Main container section 4 */
+
 .section__4 {
   display: inline-block;
   margin: 70px 150px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -265,10 +276,9 @@ header {
 }
 
 /* Main container section 5 */
+
 .section__5 {
   display: inline-block;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 50px 150px;
 }
@@ -285,13 +295,11 @@ header {
 }
 
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 100px;
   /* margin-left: auto;
-  margin-right: auto;
-  width: 100%; */
+margin-right: auto;
+width: 100%; */
 }
 
 .footer__logo {
@@ -301,6 +309,8 @@ footer {
 .footer__list {
   width: 25%;
 }
+
+.footer__list__title {}
 
 .footer__list__position {
   margin: 10px 0;
@@ -331,4 +341,3 @@ footer {
   font-size: 14px;
   border-radius: 4px;
 }
-/*# sourceMappingURL=style.css.map */
