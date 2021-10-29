@@ -110,7 +110,6 @@
  }
 }
 
-
 .scroll {
 margin-top: 115px;
 
@@ -133,7 +132,12 @@ margin-top: 115px;
  }
 }
 
+.burger {
 
+ &__bar {
+
+ }
+}
 
 .menu {
  display: flex;
@@ -194,7 +198,6 @@ margin-top: 115px;
 .left {
  &__title {
   font-size: 36px;
-  line-height: 26px;
   text-transform: capitalize;
   color: #ffffff;
   font-weight: 400;
@@ -204,7 +207,6 @@ margin-top: 115px;
  &__description {
   font-size: 16px;
   letter-spacing: 2px;
-  line-height: 26px;
   color: #e8e8e8;
   font-family: "Josefin Sans", serif;
   margin-bottom: 30px;
@@ -334,21 +336,24 @@ margin-top: 115px;
 }
 
 .box {
- font-size: 20px;
- letter-spacing: 2px;
- color: #e8e8e8;
- font-family: "Josefin Sans", sans-serif;
- justify-content: space-around;
 
  &__subtitle {
-
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #e8e8e8;
+  font-family: "Josefin Sans", sans-serif;
+  justify-content: space-around;
  }
  &__title {
   text-transform: uppercase;
-
+  font-size: 20px;
+  color: #fefefe;
+  font-family: "Josefin Sans", sans-serif;
  }
  &__description {
   font-size: 16px;
+  color: #e8e8e8;
+  font-family: "Josefin Sans", sans-serif;
 
 
  }
@@ -436,17 +441,11 @@ margin-top: 115px;
  background-repeat: no-repeat;
  background-size: cover;
 
- &__container {
-
-
- }
-
  }
 
 .container {
 
-
- &__title {
+ &__name {
   font-size: 36px;
   color: #ffffff;
   font-weight: 400;

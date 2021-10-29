@@ -1,15 +1,185 @@
-@media screen and (max-width: 760px){
+$breakpoints: (
+        "xl": 1200px,
+        "lg": 960px,
+        "md": 720px,
+        "sm": 480px,
+        "xs": 0,
+);
+
+@media screen and (max-width: 767px) {
+  // Header
   .menu {
-    background: red;
 
 
     &__logo {
 
     }
+
     &__link {
+      display: none;
+
+    }
+  }
+
+  //  Section 1
+
+  .section-1 {
+    &__left {
+      width: 100%;
+    }
+
+    &__right {
+      display: none;
+    }
+  }
+  .left {
+    &__title {
+      font-size: 32px;
+    }
+
+    &__description {
+      font-size: 20px;
+    }
+  }
+
+  // Section 2
+
+  .section-2 {
+
+    &__wrap {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      max-width: 1250px;
+      min-width: 400px;
+      padding: 50px;
+
+    }
+  }
+  .wrap {
+
+    &__subtitle {
+      text-decoration: none;
+      font-size: 20px;
+      text-align: center;
 
 
     }
   }
 
+  //  Section 3
+
+  .section-3 {
+    &__container {
+      width: 400px;
+      height: 500px;
+    }
+  }
+
+  .box {
+
+    &__subtitle {
+      font-size: 24px;
+    }
+
+    &__title {
+      font-size: 23px;
+
+    }
+
+    &__description {
+      font-size: 20px;
+    }
+  }
+
+  //  Section 4
+
+  .section-4 {
+    &__container {
+      width: 400px;
+      height: 500px;
+      transform: translate(30%, 50%);
+      float: right;
+    }
+
+  }
+  .box {
+
+    &__subtitle {
+      font-size: 24px;
+    }
+
+    &__title {
+      font-size: 23px;
+
+    }
+
+    &__description {
+      font-size: 20px;
+    }
+  }
+
+  //  Section 5
+
+  .section-5 {
+
+    .container {
+
+      &__name {
+        font-size: 30px;
+        padding-top: 70px;
+      }
+
+      &__wrapper {
+        display: flex;
+        justify-content: center;
+        transform: translate(7%, 10%);
+        flex-direction: column;
+      }
+    }
+    .wrapper {
+      &__picture {
+        display: flex;
+        justify-content: center;
+      }
+      &__text {
+        box-sizing: border-box;
+        width: 500px;
+        height: 286px;
+        background-color: rgba(0, 0, 0, .6);
+        padding: 50px;
+      }
+
+    }
+
+    .text {
+
+      &__title {
+        text-transform: uppercase;
+        font-size: 20px;
+        color: #fefefe;
+        font-family: "Josefin Sans", sans-serif;
+        margin-bottom: 30px;
+      }
+
+      &__description {
+        font-size: 18px;
+        color: #4b4b4b;
+        font-family: "Font Awesome", sans-serif;
+
+      }
+
+      &__description::before {
+        content: open-quote;
+        font-weight: bold;
+        font-size: 36px;
+        color: #5474fd;
+        float: left;
+        line-height: 40%;
+        margin-right: 10px;
+      }
+
+    }
+
+  }
 }
