@@ -11,7 +11,23 @@
 </head>
 <body>
 
+<!--
+    1) название класса - безсмысленные
+    2) Принцип построения БЕМ дерева - ты нормально понял ето уже прекрассно.
+        Но смысл БЕМа в том, что бы НЕ писать каждый раз стили для каждого блока и елемента.
+        Смысл БЕМа в том что бы один раз написать стили на классы, и применять ети классы где нужны такие стили.
+        Тоесть section-1,section-2,section-3 = нужно было написать общие стили для етих блоков
+        А внутри уже будут другие блоки с другими стилями.
+-->
+
 <header class="header">
+    <!--
+    Адаптива нету:
+     - картинка без адаптива. (background-position: center;)
+     - навигация - вообще ломается
+     - потом поисковая строка не вмещается
+     - кнопка скролл не работает
+    -->
     <div class="header__top" id="first-page">
         <div class="header__info info">
             <div class="info__burger">
@@ -52,13 +68,27 @@
             <a class="menu__link" href="#footer">Contact Us</a>
         </nav>
     </div>
-
+<!-- Непонятный промежуток/отступ  - используй плагин выравнивания кода -->
 
 </header>
 
 <!--Section 1-->
-
 <section class="section-1">
+    <!--
+        1) название класса.
+        2) сильно отличаются от макета.
+        - отступы между картинками и текстом
+        - высота тестовых блоков, и как следствие положение кнопки
+        структура по БЕМу - норм. Нейминг классов ужасный.
+
+
+    Адаптив - частичный, после 1400 - все плохо:
+        - текст сильно ужимается и не читабелен.
+        - картинки не адаптивный, и не подстраиваются
+        - по бокам много пустого безполезного пространства
+        - после 956 - блоки ломают структуру сайта
+
+    -->
         <div class="section-1__left left">
             <h1 class="left__title">Why Choose Us</h1>
             <p class="left__description">Tion and dislike men who are so beguiled and demoralized by desire by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee</p>
@@ -77,8 +107,17 @@
 </section>
 
 <!--Section 2-->
-
 <section class="section-2">
+    <!--
+        1) название класса.
+        2) сильно отличаются от макета.
+        - растояние между иконками
+
+        структура по БЕМу - норм. Нейминг классов ужасный. Класс "wrap" - старайся не использовать.
+
+    Адаптив:
+        - Нормальный
+    -->
     <div class="section-2__wrap wrap">
         <div class="wrap__block">
             <svg class="wrap__icon1" xmlns="http://www.w3.org/2000/svg" width="56.531" height="56.53" viewBox="0 0 56.531 56.53">
@@ -105,8 +144,14 @@
 </section>
 
 <!--Section 3-->
-
 <section id="benefits" class="section-3">
+    <!--
+    название класса.
+
+    Адаптива нету:
+     - картинка без адаптива.
+     - блок не двигается вообще
+     -->
     <div class="section-3__container">
         <div class="section-3__box box">
             <p class="box__subtitle">Spain</p>
@@ -116,14 +161,20 @@
                 <button class="btn__book-now" type="submit" >Book Now</button>
             </div>
         </div>
-
     </div>
-
 </section>
 
 <!--Section 4-->
-
 <section id="city" class="section-4">
+    <!-- название класса.
+     - сильно отличается - нижний отступ от черного квадрата.
+     - и как следствие ето полностью сбивает следуйшую секцию
+
+    Адаптива нету:
+     - картинка без адаптива.
+     - блок с текстом улетел
+     - И самая большая ошибка - блок ломает страницу.
+     -->
     <div class="section-4__container">
         <div class="section-4__box box">
             <p class="box__subtitle">Spain</p>
@@ -137,8 +188,19 @@
 </section>
 
 <!--Section 5-->
-
 <section id="options" class="section-5">
+    <!-- название класса.
+     Сильно отличается от макета
+     1) Отступы верхний
+     2) Размер блока
+     3) размер текста
+     4) цвет задемения под текстом
+
+     Адаптива нету:
+     - картинка не ужимается,
+     - текст вообще не читабелен
+     - блок текста ужался сильней картинки.
+     -->
     <div class="section-5__container container">
         <h1 class="container__name">What Our  Tourist Say</h1>
         <div class="container__wrapper wrapper">
@@ -157,7 +219,18 @@
 <!--Footer-->
 
 <footer id="footer" class="footer">
+    <!--
+    Отличия от макета
+    1) размер текста
+    2) высота отступов
+    3)
+
+    -->
     <div class="footer__info info">
+        <!--
+        Тут с бемом напутал. footer__social - должен быть  info__social
+        Да и вообще блок/класс/"структура с классом"  info - ненужна.
+        -->
         <div class="info__logo logo">
             <a class="logo__name" href="#first-page">Bhromaon</a>
             <p class="logo__description">Safe Travel Anywhere</p>
