@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -134,6 +135,12 @@ table {
   border-spacing: 0;
 }
 
+/*
+- Используй выравнивание для кода
+- Названия в духе "section-1","section-2"  - очень хорошо подходят для тестовых вещей
+  но не для проектной работы
+-
+*/
 .header {
   background: url("../img/header_bg_img.jpg");
   width: 100%;
