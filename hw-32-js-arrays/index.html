@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./main.css">
+    <title>Document</title>
+</head>
+<body>
+<!--Version 1-->
+<!--<form data-bind="submit: AddItems">-->
+<!--    Добавить покупку: <input type="text" data-bind="value: NewItem, valueUpdate: 'afterkeydown'" />-->
+<!--    <input type="submit" data-bind="enable: NewItem().length > 0" value="Добавить" />-->
+<!--</form>-->
+<!--<div class="panels">-->
+<!--    <div class="list">-->
+<!--        <p>Нужно купить:</p>-->
+<!--        <select multiple="multiple" class="select" data-bind="options: Items, selectedOptions: SelectedItems"></select>-->
+<!--        <button data-bind="click: Buy">Куплено</button>-->
+<!--    </div>-->
+<!--    <div class="list">-->
+<!--        <p>Куплено:</p>-->
+<!--        <select multiple="multiple" class="select bought" data-bind="options: BoughtItems, selectedOptions: SelectedBoughtItems"></select>-->
+<!--        <button data-bind="click: DeleteItems">Удалить</button>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<!--<h4>Задание 2</h4>-->
+<!--<p>-->
+<!--    Создать массив, описывающий чек в магазине. Каждый элемент массива состоит из названия товара, количества и цены за единицу товара. Написать следующие функции.-->
+<!--</p>-->
+<!--<p>-->
+<!--    1. Распечатка чека на экран. 2. Подсчет общей суммы покупки 3. Получение самой дорогой покупки в чеке. 4. Подсчет средней стоимости одного товара в чеке-->
+<!--</p>-->
+
+<!--<script>-->
+<!--    let arr = []-->
+<!--    arr[0] = 'Apple'-->
+<!--    arr[1] = 'Mango'-->
+<!--    arr[2] = 'Citrus'-->
+<!--    arr[3] = 'Alcohol'-->
+<!--    bootbox.alert(arr);-->
+<!--</script>-->
+
+<!--&lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">-->
+<!--    1. Вывести чек на экран-->
+<!--</button>-->
+
+<!--&lt;!&ndash; Modal &ndash;&gt;-->
+<!--<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+<!--    <div class="modal-dialog">-->
+<!--        <div class="modal-content">-->
+<!--            <div class="modal-header">-->
+<!--                <h5 class="modal-title" id="exampleModalLabel">Чек</h5>-->
+<!--                <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--                    <span aria-hidden="true">&times;</span>-->
+<!--                </button>-->
+<!--            </div>-->
+<!--            <div class="modal-body">-->
+<!--                ...-->
+<!--            </div>-->
+<!--            <div class="modal-footer">-->
+<!--                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+<!--                &lt;!&ndash; <button type="button" class="btn btn-primary">Save changes</button> &ndash;&gt;-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+
+<h4>Задание 1</h4>
+
+
+<script>
+    function getit() {
+        var result = document.getElementById('demo');
+        var allitems = 0;
+        var itemCount = prompt("how many items do you need?");
+        var items = {};
+        for (i = 0; i < itemCount; i++) {
+            items[i] = {
+
+                name: prompt("Product Name"),
+                price: prompt("Product Price"),
+                qty: prompt("Product qty")
+
+            }
+        }
+
+        for (i = 0; i < itemCount; i++) {
+            var subtotal = 0;
+            var total = 0;
+            subtotal = items[i].price * items[i].qty;
+            total = subtotal * 1.05;
+            allitems = allitems + subtotal;
+            result.innerHTML += "Product: " + items[i].name + "<br/>";
+            result.innerHTML += "Total Qty: " + items[i].qty + "<br/>";
+            result.innerHTML += "Sub total: " + subtotal + "<br/>";
+            result.innerHTML += "Sub total: " + total + "<br/>";
+            if (i == (itemCount - 1)) {
+                result.innerHTML += "Sub total for all items: " + allitems + "<br/>";
+            }
+        }
+    }
+</script>
+
+<button onclick="getit()">Shop</button>
+<p id="result">Задание 1 завершилось.</p>
+<hr>
+<h4>Задание 2</h4>
+<p>
+    Создать массив, описывающий чек в магазине. Каждый элемент массива состоит из названия товара, количества и цены за единицу товара. Написать следующие функции.
+</p>
+<p>
+    1. Распечатка чека на экран. 2. Подсчет общей суммы покупки 3. Получение самой дорогой покупки в чеке. 4. Подсчет средней стоимости одного товара в чеке
+</p>
+
+<!-- Button trigger modal -->
+<button id="print_check" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    1. Вывести чек на экран
+</button>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Чек</h5>
+                <button id="print_check" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="my_modal">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('#print_check').click(function() {
+        let arr = [{
+            name: 'Apple',
+            bill: 23
+        }, {
+            name: 'Potato',
+            bill: 5
+        }, {
+            name: 'Banana',
+            bill: 4
+        }, ];
+        document.write('<ol start="0">');
+        arr.forEach(ar => {
+            document.write(`<li> <span style="color: #1a55cc">${ar.name}</span> ${ar.bill} dollar.</li>`);
+        });
+        document.write('<ol>');
+        $('#my_modal').html(html_check);
+        $('#exampleModal').modal('show');
+    });
+</script>
+
+<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+
+</html>
+<script src="hw-32-arrays.js"></script>
+</body>
+</html>

@@ -135,29 +135,29 @@ console.log('Нечетные числа', oddNumbers);*/
 
 //V1 switch/case
 
-do {
-    let number1 = parseInt(prompt('Enter first number')) ;
-    let number2 = parseInt(prompt('Enter second number'));
-    let symbol = prompt('Enter symbol');
-    switch (symbol) {
-        case '+':
-            alert(number1 + number2);
-            break;
-        case '-':
-            alert(number1 - number2);
-            break;
-        case '*':
-            alert(number1 * number2);
-            break;
-        case '/':
-            alert(number1 / number2);
-            break;
-    }
-} while (confirm('Repeat?'));
+// do {
+//     let number1 = parseInt(prompt('Enter first number')) ;
+//     let number2 = parseInt(prompt('Enter second number'));
+//     let symbol = prompt('Enter symbol');
+//     switch (symbol) {
+//         case '+':
+//             alert(number1 + number2);
+//             break;
+//         case '-':
+//             alert(number1 - number2);
+//             break;
+//         case '*':
+//             alert(number1 * number2);
+//             break;
+//         case '/':
+//             alert(number1 / number2);
+//             break;
+//     }
+// } while (confirm('Repeat?'));
 
 //V2  if/else
 
-/*do {
+do {
     let number1 = parseInt(prompt('Enter first number')) ;
     let number2 = parseInt(prompt('Enter second number'));
     if (isNaN(number1) || isNaN(number2)){
@@ -176,7 +176,7 @@ do {
             alert('Incorrect symbol')
         }
     }
-} while (confirm('Repeat?'));*/
+} while (confirm('Repeat?'));
 
 
 
