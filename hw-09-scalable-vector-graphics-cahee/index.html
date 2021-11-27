@@ -4,29 +4,260 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>hw-09-scalable-vector-graphics-cahee</title>
 </head>
 <body>
-    <header>
-        <h1 class="logo">Cahee</h1>
-        <nav class="navigation">
-            <a class="navigation-link" href="/">Home</a>
-            <a class="navigation-link" href="/">About</a>
-            <a class="navigation-link" href="/">Services</a>
-            <a class="navigation-link" href="/">Gallery</a>
-            <a class="navigation-link" href="/">Blog</a>
-            <a class="navigation-link" href="/">Contact</a>
-        </nav>
-
-    </header>
-    <section class="section-1">
-    
-
+<article class="fresh--wrapper" id="article1">
+    <section class="fresh">
+        <header class="header">
+            <div class="logo">
+                <img src="img/logo.svg" alt="Cahee">
+            </div>
+            <nav>
+                <input type="checkbox" name="bars-menu" id="bars-menu">
+                <label for="bars-menu">
+                    <img src="img/icons-menu.png" alt="Fresh section sandwich menu">
+                </label>
+                <ul>
+                    <li><a href="#article1">home</a></li>
+                    <li><a href="#article2">about</a></li>
+                    <li><a href="#article3">services</a></li>
+                    <li><a href="#article4">gallery</a></li>
+                    <li><a href="#article6">blog</a></li>
+                    <li><a href="#article7">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="fresh_main">
+            <div class="fresh_main__title">
+                <h2>fresh life</h2>
+            </div>
+            <div class="fresh_main__p">
+                <p>
+                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                </p>
+            </div>
+            <div class="fresh_main__btn">
+                <a href="#"><span>get free now</span></a>
+            </div>
+        </div>
+        <div class="fresh__scroll">
+            <a href="#aboutus__scrolldown">
+                <img src="img/scroll.svg" alt="Scroll Down">
+            </a>
+        </div>
     </section>
-    <section>
-
+</article>
+<div id="aboutus__scrolldown"></div>
+<article class="aboutus--wrapper" id="article2">
+    <section class="aboutus">
+        <div class="aboutus__title">
+            <h2>about us</h2>
+        </div>
+        <div class="aboutus__p">
+            <p>
+                Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
+                Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+            </p>
+        </div>
     </section>
-    
+</article>
+<article class="services--wrapper" id="article3">
+    <section class="services">
+        <div class="services__title">
+            <h2>our services</h2>
+        </div>
+        <ul class="services_btns">
+            <li class="services_btns__btn">
+                <a href="#"><strong>online shopping</strong></a>
+                <span><img src="img/icon.svg" alt="Icon"></span>
+            </li>
+            <li class="services_btns__btn">
+                <a href="#"><strong>quality product</strong></a>
+                <span><img src="img/icon1.svg" alt="Icon 1"></span>
+            </li>
+            <li class="services_btns__btn">
+                <a href="#"><strong>domestic & international delivery</strong></a>
+                <span><img src="img/icon2.svg" alt="Icon 2"></span>
+            </li>
+            <li class="services_btns__btn">
+                <a href="#"><strong>well organized</strong></a>
+                <span><img src="img/icon3.svg" alt="Icon 3"></span>
+            </li>
+        </ul>
+    </section>
+</article>
+<article class="gallery--wrapper" id="article4">
+    <section class="gallery">
+        <div class="gallery__title">
+            <h2>gallery</h2>
+        </div>
+        <div class="gallery__p">
+            <p>
+                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+        <div class="gallery_imgs">
+            <div class="gallery_imgs__img gallery_imgs__img--img1">
+                <img src="img/gallery/img1.png" alt="Image 1">
+            </div>
+            <div class="gallery_imgs__img gallery_imgs__img--img2">
+                <img src="img/gallery/img2.png" alt="Image2">
+            </div>
+            <div class="gallery_imgs__img gallery_imgs__img--img2">
+                <img src="img/gallery/img3.png" alt="Image3">
+            </div>
+            <div class="gallery_imgs__img gallery_imgs__img--img3">
+                <img src="img/gallery/img4.png" alt="Image 4">
+            </div>
+            <div class="gallery_imgs__img gallery_imgs__img--img4">
+                <img src="img/gallery/img5.png" alt="Image 5">
+            </div>
+        </div>
+        <div class="gallery__btn--wraapper">
+            <div class="gallery__btn">
+                <a href="#"><span>view more</span></a>
+            </div>
+        </div>
+    </section>
+</article>
+<article class="subscribe--wrapper" id="article5">
+    <section class="subscribe">
+        <div class="subscribe__title">
+            <h2>subscribe to us</h2>
+        </div>
+        <div class="subscribe__p">
+            <p>
+                Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            </p>
+        </div>
+        <form action="#" class="subscribe_form">
+            <input type="text" name="mail" id="mail" class="subscribe_form__input" placeholder="Your mail address">
+            <input type="submit" name="submit" value="subscribe" class="subscribe_form__submit">
+        </form>
+    </section>
+</article>
+<article class="blog--wrapper"id="article6">
+    <section class="blog">
+        <div class="blog__title">
+            <h2>Blog</h2>
+        </div>
+        <div class="blog__p">
+            <p>
+                Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.
+            </p>
+        </div>
+        <div class="blog__papers">
+            <div class="paper">
+                <a href="#"><img src="img/blog/img1.png" alt="Paper - Lorem ipsum dolor."
+                                 title="Paper - Lorem ipsum dolor."></a>
+                <div class="paper__date">
+                    <span>20 <span>nov</span></span>
+                </div>
+                <div class="paper__title">
+                    Lorem ipsum dolor.
+                </div>
+                <div class="paper__author">
+                    Lorem ipsum - Lorem Dorum
+                </div>
+            </div>
+            <div class="paper">
+                <a href="#"><img src="img/blog/img2.png" alt="Paper - Lorem ipsum dolor."
+                                 title="Paper - Lorem ipsum dolor."></a>
+                <div class="paper__date">
+                    <span>20 <span>nov</span></span>
+                </div>
+                <div class="paper__title">
+                    Lorem ipsum dolor.
+                </div>
+                <div class="paper__author">
+                    Lorem ipsum - Lorem Dorum
+                </div>
+            </div>
+            <div class="paper">
+                <a href="#"><img src="img/blog/img3.png" alt="Paper - Lorem ipsum dolor."
+                                 title="Paper - Lorem ipsum dolor."></a>
+                <div class="paper__date">
+                    <span>20 <span>nov</span></span>
+                </div>
+                <div class="paper__title">
+                    Lorem ipsum dolor.
+                </div>
+                <div class="paper__author">
+                    Lorem ipsum - Lorem Dorum
+                </div>
+            </div>
+        </div>
+        <div class="blog__btn">
+            <a href="#">view more</a>
+        </div>
+    </section>
+</article>
+<article class="contact--wrapper" id="article7">
+    <section class="contact">
+        <div class="contact__title">
+            <h2>contact</h2>
+        </div>
+        <div class="contact__p">
+            <p>
+                For new projects, ideas, business or anything
+                you'd like to discuss, contact with me!
+            </p>
+        </div>
+        <div class="contact__content">
+            <form class="contact_form">
+                <input type="text" name="name" id="name" class="contact_form__name" placeholder="Enter your name">
+                <input type="text" name="mail1" id="mail1" class="contact_form__mail" placeholder="Enter your email">
+                <input type="password" name="password" id="password" class="contact_form__password" placeholder="Enter your password">
+                <textarea name="mesage" id="mesage" class="contact_form__textarea" placeholder="Enter you message"></textarea>
+            </form>
+            <div class="contacts">
+                <div class="contacts_block">
+                    <div class="contacts_block__title">
+                        <p>ADDRESS</p>
+                    </div>
+                    <div class="contacts_block__p">
+                        <p>
+                            123 City name, Street, City, Country
+                        </p>
+                    </div>
+                </div>
+                <div class="contacts_block">
+                    <div class="contacts_block__title">
+                        <p>EMAIL</p>
+                    </div>
+                    <div class="contacts_block__p">
+                        <p>
+                            cahee@domain.com
+                        </p>
+                    </div>
+                </div>
+                <div class="contacts_block">
+                    <div class="contacts_block__title">
+                        <p>PHONE</p>
+                    </div>
+                    <div class="contacts_block__p">
+                        <p>
+                            +012 345 6789
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>
+<footer class="footer">
+    <div class="footer__copyright">
+        &copy; 2019 Company. All right reserved.
+    </div>
+    <div class="footer__cahee">
+        <img src="img/logo-small.svg" alt="Cahee Logo">
+    </div>
+    <div class="footer__author">
+        Made with <span>love</span> by Lorem
+    </div>
+</footer>
 </body>
 </html>

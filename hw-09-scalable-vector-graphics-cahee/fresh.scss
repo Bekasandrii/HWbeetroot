@@ -1,0 +1,171 @@
+@import "sets.scss";
+.fresh--wrapper{
+  background-color: $cbg1;
+}
+.fresh{
+  background: $cbg1 right no-repeat $bg1;
+  height: 100vh;
+  flex-direction: column;
+  .header{
+    height: 147px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    nav input[type="checkbox"]{
+      display: none;
+    }
+    nav label{
+      display: none;
+    }
+    nav ul{
+      width: 600px;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      li{
+        height: 30px;
+        border-top: 3px solid transparent;
+        &:hover{
+          border-top: 3px solid #ff6033;
+        }
+        a{
+          @extend %fz1;
+        }
+      }
+    }
+  }
+  &_main{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    width: 370px;
+    height: 100% - 178/853*100%;
+    &__title{
+      width: 100%;
+      margin-bottom: 35px;
+      @extend %fh1;
+    }
+    &__p{
+      width: 100%;
+      margin-bottom: 35px;
+      @extend %fz2;
+    }
+    &__btn{
+      background-color: #ff6033;
+      align-self: flex-start;
+      @extend %btn;
+    }
+  }
+  &__scroll{
+    width: 100%;
+    height: 178px;
+    display: flex;
+    justify-content: center;
+    a{
+      height: 40px;
+    }
+  }
+}
+@media only screen and (max-width: 850px){
+  .fresh--wrapper{
+    padding: 0 25px;
+    .fresh{
+      .logo{
+        width: 100%;
+        text-align: center;
+      }
+      .header{
+        display: block;
+        nav {
+          width: 100%;
+          display: block;
+          text-align: center;
+          ul{
+            display: none;
+            li{
+              border: none;
+              a{
+                color: #fff;
+                font-size: 32px;
+              }
+              + li{
+                margin-top: 20px;
+              }
+            }
+          }
+          label{
+            display: block;
+            cursor: pointer;
+            margin-left: auto;
+            height: 42px;
+            width: 42px;
+            img{
+              width: 100%;
+              height: 100%;
+            }
+          }
+          input[type="checkbox"]:checked ~ ul{
+            display: flex;
+            width: 100%;
+            flex-flow: column nowrap;
+            position: absolute;
+            top: 120px;
+            background: rgba(0,0,0,.8);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            li{
+              display: block;
+              &:hover{
+                a{
+                  opacity: .3;
+                }
+              }
+            }
+
+          }
+        }
+
+      }
+      &_main{
+        align-self: center;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        text-align: center;
+        &__btn{
+          display: flex;
+          align-self: center;
+        }
+      }
+    }
+
+  }
+}
+@media only screen and (max-width: 700px){
+  .fresh--wrapper{
+    padding: 0;
+    .fresh{
+      .header{
+        padding: 0 10px;
+        box-sizing: border-box;
+      }
+      background-position: center;
+      &_main{
+        width: 100%;
+        &__title{
+          width: 100%;
+        }
+        &__p{
+          width: 100%;
+        }
+      }
+    }
+  }
+}

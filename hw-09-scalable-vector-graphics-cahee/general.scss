@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+  transition: all .3s ease-in;
+  scroll-behavior: smooth;
+  font-family: 'Raleway', sans-serif;
+}
+article{
+  width: 100%;
+  padding-left: $plr;
+  padding-right: $plr;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section{
+  max-width: 1170px;
+  width: 1170px;
+  align-self: center;
+  display: flex;
+}
+@media only screen and (max-width: 950px){
+  article{
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+}

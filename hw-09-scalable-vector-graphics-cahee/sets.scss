@@ -1,0 +1,154 @@
+$ctxt1: #262626;/*darkgrey*/
+$ctxt2: #fff;/*white*/
+
+$cbg1: #f9f8fb;/*bg color section fresh life*/
+$cbg2: #00baba;/*bg color about us bg*/
+$cbg3: #70bfff;/*bg color our services section*/
+$cbg4: #ffe92f;/*bg color setion gallery*/
+$cbg5: #fff;/* bg color section subcribe to us*/
+$cbg6: #b07cf7;/*bg color section blog*/
+
+$bg1: url('bg/freshlife_second_bg.png');
+$bg2: url('bg/aboutus_second_bg.png');
+$bg3: url('bg/services_second_bg.png');
+$bg4: url('bg/subscribetous_second_bg.png');
+$bg5: url('bg/contact.png');
+
+
+$cbtn1: #ff6033;
+$cbtn2: #fff;
+$cbtn3: #5585a2;
+$cbtn4: #96b92c;
+$cbtn5: #f72b3b;
+
+$p1: 15px;
+$p2: 30px;
+$plr: 150px;
+
+$wbtn1: 200px;
+$wbtn2: 170px;
+$hbtn: 55px;
+
+%fz1{/*header menu*/
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 25px;
+  color: $ctxt1;
+  text-decoration: none;
+}
+%fz2{/*fresh life p*/
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 27px;
+  color: $ctxt1;
+}
+%fz3{/*about us p*/
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 25px;
+  color: $ctxt2;
+}
+%fz4{/*blog p*/
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 25px;
+  color: $ctxt2;
+  text-align: center;
+}
+%fz5{/*subscribe p*/
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 27px;
+  color: $ctxt1;
+}
+%fz6{/*contact p*/
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 25px;
+  color: $ctxt1;
+  text-align: center;
+}
+%fz7{
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 25px;
+  color: $ctxt1;
+}
+%fh1 h2{/*fresh life h2*/
+  font-size: 60px;
+  font-weight: 600;
+  color: $ctxt1;
+  line-height: .8;
+  text-transform: capitalize;
+}
+%fh2 h2{/*about us h2 services h2*/
+  font-size: 90px;
+  font-weight: bold;
+  color: $ctxt2;
+  line-height: .8;
+  text-transform: capitalize;
+}
+%fh3 h2{/*gallery h2*/
+  font-size: 90px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: $ctxt1;
+  text-align: center;
+}
+%fh4 h2{/*subscribe to us h2*/
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 27px;
+  color: $ctxt1;
+  line-height: .8;
+  text-transform: capitalize;
+  letter-spacing: 0;
+}
+%fh5 h2{/*blog h2*/
+  font-size: 90px;
+  font-weight: bold;
+  color: $ctxt2;
+  text-transform: capitalize;
+}
+%fh6 h2{/*contact h2*/
+  font-size: 90px;
+  font-weight: bold;
+  line-height: 25px;
+  color: $ctxt1;
+  line-height: .8;
+  text-transform: capitalize;
+}
+%btn{
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .5);
+  &:hover{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .8);
+    transform:scale(.99);
+  }
+  a{
+    color: #fff;
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: $wbtn1;
+    height: $hbtn;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+h2{
+  margin: 0;
+  padding: 0;
+}
+p{
+  margin: 0;
+  padding: 0;
+}
+h3{
+  margin: 0;
+  padding: 0;
+}

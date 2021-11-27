@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hw-33-classes</title>
+</head>
+<body>
+<!--Class Version-->
+<p id="fillId"></p>
+<script>
+
+    class Marker {
+        constructor(color, quantity, inputFillId) {
+            this.color = color;
+            this.quantity = quantity * 2;
+            this.fill = this._findFill(inputFillId);
+        }
+        write(text){
+            let newString = '';
+            for (let index = 0; index < text.length; index++){
+                if(index >= this.quantity){
+                    break;
+                }
+                newString = newString + text[index];
+            }
+            console.log(this.fill);
+            debugger
+            this.fill.innerText = newString;
+            this.fill.style.color = this.color;
+        }
+        _findFill(itemId){
+           return document.getElementById(itemId)
+        }
+    }
+    let pen = new Marker('red', 20, 'fillId' );
+    console.log('pen',pen);
+    pen.write('Lorem ipsum dolor sit amet.');
+
+</script>
+
+<script src="hw-33-classes.js"></script>
+
+</body>
+</html>
