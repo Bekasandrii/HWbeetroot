@@ -2,7 +2,7 @@
 body {
   font-family: "Quicksand", sans-serif;
   /* background-color: #e5eeee; */
-  /* background: url(./IMG/img.jpg) no-repeat center center; */
+  /* background: url(./IMG/images.jpg) no-repeat center center; */
   min-height: 100px;
   background-color: #e5eeee;
 }
@@ -23,7 +23,7 @@ body {
 .modal__panel {
   max-width: 400px;
   /* height: 496px; */
-  /* background-image: url(./IMG/img.jpg); */
+  /* background-image: url(./IMG/images.jpg); */
   background-size: cover;
   padding: 50px 70px;
   position: relative;

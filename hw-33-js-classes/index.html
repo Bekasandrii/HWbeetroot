@@ -5,8 +5,11 @@
     <title>hw-33-classes</title>
 </head>
 <body>
+
 <!--Class Version-->
+
 <p id="fillId"></p>
+<p id="newFill"></p>
 <script>
 
     class Marker {
@@ -18,23 +21,30 @@
         write(text){
             let newString = '';
             for (let index = 0; index < text.length; index++){
-                if(index >= this.quantity){
+                if(text[index] === ''){
+                    this.quantity = this.quantity + 1
+
+                }
+                if (index >= this.quantity){
                     break;
                 }
+
                 newString = newString + text[index];
             }
-            console.log(this.fill);
-            debugger
-            this.fill.innerText = newString;
+
+            this.fill.innerHTML = newString;
             this.fill.style.color = this.color;
+            console.log('newString', newString.length);
         }
         _findFill(itemId){
            return document.getElementById(itemId)
         }
     }
     let pen = new Marker('red', 20, 'fillId' );
-    console.log('pen',pen);
     pen.write('Lorem ipsum dolor sit amet.');
+
+    let pen2 = new Marker('green', 20, 'newFill' );
+    pen2.write('Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.');
 
 </script>
 
