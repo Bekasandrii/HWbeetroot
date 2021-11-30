@@ -8,45 +8,45 @@
 
 <!--Class Version-->
 
-<p id="fillId"></p>
-<p id="newFill"></p>
-<script>
+<!--<p id="fillId"></p>-->
+<!--<p id="newFill"></p>-->
+<!--<script>-->
 
-    class Marker {
-        constructor(color, quantity, inputFillId) {
-            this.color = color;
-            this.quantity = quantity * 2;
-            this.fill = this._findFill(inputFillId);
-        }
-        write(text){
-            let newString = '';
-            for (let index = 0; index < text.length; index++){
-                if(text[index] === ''){
-                    this.quantity = this.quantity + 1
+<!--    class Marker {-->
+<!--        constructor(color, quantity, inputFillId) {-->
+<!--            this.color = color;-->
+<!--            this.quantity = quantity * 2;-->
+<!--            this.fill = this._findFill(inputFillId);-->
+<!--        }-->
+<!--        write(text){-->
+<!--            let newString = '';-->
+<!--            for (let index = 0; index < text.length; index++){-->
+<!--                if(text[index] === ''){-->
+<!--                    this.quantity = this.quantity + 1-->
 
-                }
-                if (index >= this.quantity){
-                    break;
-                }
+<!--                }-->
+<!--                if (index >= this.quantity){-->
+<!--                    break;-->
+<!--                }-->
 
-                newString = newString + text[index];
-            }
+<!--                newString = newString + text[index];-->
+<!--            }-->
 
-            this.fill.innerHTML = newString;
-            this.fill.style.color = this.color;
-            console.log('newString', newString.length);
-        }
-        _findFill(itemId){
-           return document.getElementById(itemId)
-        }
-    }
-    let pen = new Marker('red', 20, 'fillId' );
-    pen.write('Lorem ipsum dolor sit amet.');
+<!--            this.fill.innerHTML = newString;-->
+<!--            this.fill.style.color = this.color;-->
+<!--            console.log('newString', newString.length);-->
+<!--        }-->
+<!--        _findFill(itemId){-->
+<!--           return document.getElementById(itemId)-->
+<!--        }-->
+<!--    }-->
+<!--    let pen = new Marker('red', 20, 'fillId' );-->
+<!--    pen.write('Lorem ipsum dolor sit amet.');-->
 
-    let pen2 = new Marker('green', 20, 'newFill' );
-    pen2.write('Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.');
+<!--    let pen2 = new Marker('green', 20, 'newFill' );-->
+<!--    pen2.write('Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.');-->
 
-</script>
+<!--</script>-->
 
 <script src="hw-33-classes.js"></script>
 

@@ -1,6 +1,66 @@
 /*=================== Завдання 1 ===================*/
 
 /*Створити сторінку, що показує нумерований список пісень:*/
+
+//Version 1
+
+/*let playList = [
+    {
+        author: "LED ZEPPELIN",
+        song: "STAIRWAY TO HEAVEN"
+
+    },
+
+    {
+        author: "QUEEN",
+        song: "BOHEMIAN RHAPSODY"
+    },
+
+    {
+        author: "LYNYRD SKYNYRD",
+        song: "FREE BIRD"
+    },
+
+    {
+        author: "DEEP PURPLE",
+        song: "SMOKE ON THE WATER"
+    },
+
+    {
+        author: "JIMI HENDRIX",
+        song: "ALL ALONG THE WATCHTOWER"
+    },
+
+    {
+        author: "AC/DC",
+        song: "BACK IN BLACK"
+    },
+
+    {
+        author: "QUEEN",
+        song: "WE WILL ROCK YOU"
+    },
+
+    {
+        author: "METALLICA",
+        song: "ENTER SANDMAN"
+    }
+];
+
+let listForHtml = ``;
+
+for ( i = 0; i < playList.length; i++ ){
+    listForHtml = listForHtml + ` </p> ${ i + 1 } ${playList[i].author} ${playList[i].song} </p> `
+}
+
+document.write(listForHtml);
+
+document.querySelector('.styleP').innerHTML = 'songsList';*/
+
+
+
+//Version 2
+
 /*let playList = [
     {
         author: 'LED ZEPPELIN',
@@ -59,6 +119,22 @@ for (let i in playList) {
 на кнопку "Закрити" — зникає.
  */
 
+//Version 1
+
+/*let btnEx = document.getElementById('closeModal');
+
+btnEx.onclick = function () {
+    document.querySelector('.modal-window').style = 'display: none;'
+}
+
+let btnOpn = document.getElementById('openModal');
+
+btnOpn.onclick = function (){
+    document.querySelector('.modal-window').style = `display: block;`
+}
+*/
+//Version 2
+
 /*const btn = document.createElement("button");
 const p = document.createElement("p");
 p.textContent = "Open";
@@ -86,6 +162,36 @@ btn.addEventListener("click", () => {
 /*=================== Завдання 3 ===================*/
 /*Створити HTML-сторінку зі світлофором і кнопкою,
 яка перемикає світлофор на наступний колір.*/
+
+//Version 1
+
+document.getElementById('switch').onclick = function () {
+    // находим все элементы с классом .lamp и добалвяем в коллекцию lamps
+    let lamps = document.querySelectorAll('.lamp');
+
+    // объявляем вспомогательную переменную;
+    // присваиваем по-умолчанию значение меньше нуля чтобы программа
+    // срабатывала даже если ни у одного элемента нет класса active;
+    let j = -1;
+
+    // перебираем коллекцию lamps
+    for (let i = 0; i < lamps.length; i++) {
+        if (lamps[i].classList.contains('active')) {
+            lamps[i].classList.remove('active');
+            j = i + 1;
+        }
+    }
+    // условие которое проверяет есть ли элемент с индексом j в коллекции
+    // если нет - то j = 0
+    if (j >= lamps.length || j < 0) {
+        j = 0;
+    }
+    // присваиваем следующему элементу класс active
+    lamps[j].classList.add('active');
+}
+
+
+//Version 2
 
 /*const trafficLights = document.querySelector("div.traffic__light");
 

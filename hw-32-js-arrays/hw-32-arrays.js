@@ -5,6 +5,70 @@
 Добавление покупки в список. Учтите, что при добавлении покупки с уже существующим в списке продуктом,
 необходимо увеличивать количество в существующей покупке, а не добавлять новую.
 Покупка продукта. Функция принимает название продукта и отмечает его как купленный.*/
+// Version 1 Detailing
+
+/*let shoppingList = [{
+    productName: 'tomatoes',
+    quantity: 4,
+    bought: false,
+    unitPrice: 5
+}, {
+    productName: 'apples',
+    quantity: 2,
+    bought: false,
+    unitPrice: 3
+}, {
+    productName: 'bananas',
+    quantity: 10,
+    bought: false,
+    unitPrice: 6
+}]; // Покупка продукту. Функція приймає назву продукту і відзначає його як придбаний.
+
+function buyProduct(arr, nameOfProduct) {
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i].productName === nameOfProduct) {
+            if (arr[i].bought === false) {
+                arr[i].bought = true;
+                break;
+            } else {
+
+            }
+        }
+    }
+}
+
+buyProduct(shoppingList, 'apples'); // console.log(shoppingList);
+
+// Створення списку (не) придбаних продуктів.
+
+function showUnBought(arr) {
+    let unBoughtProduct = arr.filter(function (unbought) {
+        return unbought.bought === false;
+    });
+    let print = '';
+
+    for (i = 0; i < unBoughtProduct.length; i++) {
+        print = print + '' + unBoughtProduct[i].productName + ' ' + unBoughtProduct[i].quantity + '\n';
+    }
+
+    return print;
+}
+
+console.log(showUnBought(shoppingList));
+
+// Виводити весь список на екран таким чином, щоб спочатку йшли продукти, що ще не придбані, а потім - ті, що вже придбали.
+// (Робота функції що виводить список непридбаних продуктів спочатку, роботу робимо над копією ісходного масиву.)
+
+let shoppingListForWork = shoppingList.slice();
+
+function compareProduct(arr) {
+    arr.sort(function (left, right) {
+        return left.bought - right.bought;
+    });
+}
+compareProduct(shoppingListForWork);
+console.log(shoppingListForWork);
+*/
 
 // Class version
 
