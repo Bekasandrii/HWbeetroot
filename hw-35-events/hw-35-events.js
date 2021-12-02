@@ -7,7 +7,7 @@
  замість textarea з'являється div з уже зміненим текстом.
  Не забудь вимкнути поведінку за замовчуванням для цих поєднань клавіш.*/
 
-document.body.addEventListener("keydown", (event) => {
+/*document.body.addEventListener("keydown", (event) => {
     const resizer = document.createElement("div");
     if ((event.code === "KeyE" || event.code === "Comma") && event.ctrlKey) {
         event.returnValue = false;
@@ -45,7 +45,7 @@ document.body.addEventListener("keydown", (event) => {
         }
     }
 
-});
+});*/
 
 /*=================== Завдання 2 ===================*/
 
@@ -219,7 +219,7 @@ document.querySelectorAll('th').forEach(th => th.addEventListener('click', (() =
 Реалізувати можливість змінювати розмір блоку,
 якщо затиснути мишку в правому нижньому кутку і тягнути її далі.*/
 
-/*const resDiv = document.getElementById("content__textarea");
+const resDiv = document.getElementById("content__textarea");
 const resizer = document.querySelector("div.content__textarea--resizer");
 
 const initResize = e => {
@@ -237,5 +237,5 @@ const stopResize = e => {
 };
 
 resizer.addEventListener("mousedown", initResize);
-*/
+
 
