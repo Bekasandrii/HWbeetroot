@@ -37,7 +37,7 @@ body {
 
 .nav-bar-scroll {
   box-shadow: 1px 2px 19px 5px #2f2163;
-  background: rgba(39, 112, 196, 0.95);
+  background: rgba(126, 90, 255, 100);
   transition: 0.5s ease-in;
 }
 
@@ -346,35 +346,6 @@ body {
   align-items: center;
   i {
     color: $main-bright-color;
-  }
-}
-
-// =============================== UP ARROW =============================== \\
-
-.up-arrow {
-  display: block;
-  position: fixed;
-  z-index: 5;
-  right: 15px;
-  bottom: 15px;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  visibility: hidden;
-  color: black;
-  i {
-    transform: scale(3);
-  }
-  &_visible {
-    visibility: visible;
-  }
-  @include respond-to("md") {
-    i {
-      transform: scale(2);
-    }
   }
 }
 
@@ -1065,14 +1036,6 @@ body {
   &__info:first-child {
     margin-right: 20px;
     position: relative;
-    &::after {
-      position: absolute;
-      content: "";
-      right: -20px;
-      width: 1px;
-      height: 100%;
-      background: $main-bright-color;
-    }
   }
   &__info:last-child {
     margin-left: 20px;

@@ -16,7 +16,7 @@ function initMap() {
         draggarble: false// If set to true you can drag the marker
 });
     let information = new google.maps.InfoWindow({
-        content: '<h4>MONTICELLO COMPANY</h4>'
+        content: '<h4>Monticello Co.,Ltd</h4>'
 });
     marker.addListener('click', function() {
         information.open(map, marker);

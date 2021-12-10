@@ -1,5 +1,5 @@
 $(() => {
-    //=========================== Menu ============================\\
+    //=========================== Menu nav-bar ============================\\
     $(document).scroll(() => {
         if ($(window).scrollTop() > 200) {
             $(".nav-bar").addClass("nav-bar-scroll");
@@ -22,7 +22,7 @@ $(() => {
         }
     });
 
-    // картинке в блоке "о нас"
+    //=========================== Pics about us ============================\\
 
     $(document).scroll(() => {
         if ($(window).scrollTop() > 600) {
@@ -73,12 +73,7 @@ $(() => {
         }
     });
 
-    //===========================  ============================\\
-
-    //   $(".menu__link").click(function () {
-    //     $(".menu__link_checked").removeClass("menu__link_checked");
-    //     $(this).addClass("menu__link_checked");
-    //   });
+    //=========================== Menu ============================\\
 
     $(document).scroll(() => {
         if ($(window).scrollTop() < 600) {
@@ -107,6 +102,7 @@ $(() => {
             $(".menu__link-contact").addClass("menu__link_checked");
         }
     });
+//=========================== Header slider ============================\\
 
     $(document).ready(function () {
         $(".up-arrow").click(function () {

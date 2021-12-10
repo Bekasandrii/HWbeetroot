@@ -871,7 +871,7 @@ body {
 .nav-bar-scroll {
   -webkit-box-shadow: 1px 2px 19px 5px #2f2163;
           box-shadow: 1px 2px 19px 5px #2f2163;
-  background: rgba(39, 112, 196, 0.95);
+  background: #7e5aff;
   -webkit-transition: 0.5s ease-in;
   -o-transition: 0.5s ease-in;
   transition: 0.5s ease-in;
@@ -1139,38 +1139,6 @@ body {
 
 .arrow i {
   color: #fff;
-}
-
-.up-arrow {
-  display: block;
-  position: fixed;
-  z-index: 5;
-  right: 15px;
-  bottom: 15px;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  visibility: hidden;
-  color: black;
-}
-
-.up-arrow i {
-  -webkit-transform: scale(3);
-      -ms-transform: scale(3);
-          transform: scale(3);
-}
-
-.up-arrow_visible {
-  visibility: visible;
 }
 
 .what-we-do {
@@ -1875,15 +1843,6 @@ body {
   position: relative;
 }
 
-.logo-block__info:first-child::after {
-  position: absolute;
-  content: "";
-  right: -20px;
-  width: 1px;
-  height: 100%;
-  background: #fff;
-}
-
 .logo-block__info:last-child {
   margin-left: 20px;
 }
@@ -2119,12 +2078,6 @@ body {
 
   .burger-menu {
     display: block;
-  }
-
-  .up-arrow i {
-    -webkit-transform: scale(2);
-        -ms-transform: scale(2);
-            transform: scale(2);
   }
 
   .title {
