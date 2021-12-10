@@ -1,0 +1,1089 @@
+@import "normalize.scss";
+@import "fonts.scss";
+@import "var.scss";
+@import "mixins.scss";
+
+
+// =============================== GENERAL =============================== \\
+
+body {
+  font-family: "Gotham", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container {
+  max-width: 1170px;
+  width: 73.125%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+// =============================== NAV-BAR =============================== \\
+
+.nav-bar {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+
+.nav-bar-inner {
+  padding: 53px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  //transition: 0.5s ease-in;
+}
+
+.nav-bar-scroll {
+  box-shadow: 1px 2px 19px 5px #2f2163;
+  background: rgba(39, 112, 196, 0.95);
+  transition: 0.5s ease-in;
+}
+
+.nav-bar-inner-scroll {
+  padding: 12px 0;
+}
+
+.logo {
+  @include respond-to("xl") {
+    width: 200px;
+  }
+  @include respond-to("lg") {
+    width: 160px;
+  }
+  @include respond-to("sm") {
+    width: 120px;
+  }
+}
+
+.menu {
+  margin-left: 30px;
+  display: flex;
+  list-style-type: none;
+  &__item {
+    &:nth-child(n + 2) {
+      margin-left: 55px;
+    }
+  }
+  &__link {
+    position: relative;
+    font-size: 14px;
+    line-height: 1.57;
+    text-transform: uppercase;
+    color: $main-bright-color;
+    transition: 0.1s ease-in;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 9px;
+      height: 9px;
+      left: -20px;
+      top: 50%;
+      border: 1px solid $main-bright-color;
+      border-radius: 50px;
+      transform: translateY(-50%);
+    }
+    &_checked::before {
+      background: $main-bright-color;
+    }
+    &:hover {
+      color: rgb(235, 223, 223);
+    }
+  }
+  @include respond-to("xl") {
+    &__item {
+      &:nth-child(n + 2) {
+        margin-left: 40px;
+      }
+    }
+    &__link {
+      font-size: 12px;
+    }
+  }
+  @include respond-to("lg") {
+    &__item {
+      &:nth-child(n + 2) {
+        margin-left: 45px;
+      }
+    }
+    &__link {
+      font-size: 11px;
+    }
+  }
+  @include respond-to("md") {
+    visibility: hidden;
+    width: fit-content;
+    padding: 20px;
+    padding-left: 30px;
+    position: absolute;
+    top: 100px;
+    right: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: rgba($color: #4b5562, $alpha: 0.75);
+    &__item {
+      &:nth-child(n + 2) {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+    &__link {
+      font-size: 20px;
+    }
+    &_visible {
+      visibility: visible;
+    }
+  }
+}
+
+.social-icons {
+  display: flex;
+  &__link {
+    width: 40px;
+    height: 40px;
+    border: solid 1px rgba($color: $main-bright-color, $alpha: 0.4);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in;
+    &:nth-child(n + 2) {
+      margin-left: 20px;
+    }
+    i {
+      color: $main-bright-color;
+      transition: 0.3s ease-in;
+    }
+    &:hover {
+      background: $main-bright-color;
+    }
+    &:hover > i {
+      color: #7e5aff;
+    }
+  }
+  @include respond-to("xl") {
+    &__link {
+      width: 30px;
+      height: 30px;
+      &:nth-child(n + 2) {
+        margin-left: 10px;
+      }
+      i {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.nav-bar-inner .social-icons {
+  @include respond-to("lg") {
+    display: none;
+  }
+}
+
+.burger-menu {
+  display: none;
+  &__button {
+    display: block;
+    width: 32px;
+    height: 3px;
+    border: none;
+    position: relative;
+    background: $main-bright-color;
+    cursor: pointer;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 32px;
+      height: 3px;
+      background: $main-bright-color;
+      top: -8px;
+      right: 0;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 32px;
+      height: 3px;
+      background: $main-bright-color;
+      top: 8px;
+      right: 0;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  @include respond-to("md") {
+    display: block;
+  }
+}
+
+// =============================== HEADER-START =============================== \\
+
+.header-start {
+  height: 100vh;
+  background: linear-gradient(to top, #55b7ff, #7e5aff);
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url("../img/header-background.png") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 2;
+  }
+}
+
+.header-start-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+}
+
+.header-slider-block {
+  // position: relative;
+  // z-index: 4;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-slider-block .slick-dots {
+  position: absolute;
+  z-index: 4;
+  top: 30%;
+  right: -15%;
+  list-style-type: none;
+}
+.header-slider-block .slick-dots li {
+  margin: 60px 15px 0;
+  width: 8px;
+  height: 8px;
+  border: 1px solid $main-bright-color;
+  border-radius: 50px;
+  cursor: pointer;
+  background: none;
+}
+/* Активная точка */
+.header-slider-block li.slick-active {
+  background: $main-bright-color;
+}
+/* Элемент точки */
+.header-slider-block .slick-dots li button {
+  font-size: 0;
+  border: none;
+  background: none;
+}
+
+.header-slider-block .slick-dots li button:focus {
+  outline: none;
+}
+
+.main-title-block {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $main-bright-color;
+  &__title {
+    font-size: 80px;
+    font-weight: bold;
+    letter-spacing: 4px;
+  }
+  &__description {
+    margin-top: 20px;
+    font-size: 18px;
+    letter-spacing: 5.4px;
+  }
+  @include respond-to("xl") {
+    &__title {
+      font-size: 70px;
+    }
+    &__description {
+      font-size: 16px;
+    }
+  }
+  @include respond-to("lg") {
+    padding-top: 50px;
+    &__title {
+      font-size: 50px;
+    }
+    &__description {
+      font-size: 13px;
+    }
+  }
+  @include respond-to("sm") {
+    &__title {
+      font-size: 35px;
+    }
+    &__description {
+      font-size: 11px;
+    }
+  }
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba($color: $main-bright-color, $alpha: 0.4);
+  border-radius: 50px;
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  i {
+    color: $main-bright-color;
+  }
+}
+
+// =============================== UP ARROW =============================== \\
+
+.up-arrow {
+  display: block;
+  position: fixed;
+  z-index: 5;
+  right: 15px;
+  bottom: 15px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  color: black;
+  i {
+    transform: scale(3);
+  }
+  &_visible {
+    visibility: visible;
+  }
+  @include respond-to("md") {
+    i {
+      transform: scale(2);
+    }
+  }
+}
+
+// =============================== WHAT WE DO =============================== \\
+
+.what-we-do {
+  padding: 100px 0 140px 0;
+  @include respond-to("sm") {
+    padding: 70px 0 90px 0;
+  }
+}
+
+.title {
+  padding-top: 40px;
+  text-align: center;
+  font-size: 44px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $main-dark-color;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 2px;
+    background: $main-dark-color;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @include respond-to("lg") {
+    font-size: 37px;
+  }
+  @include respond-to("md") {
+    font-size: 33px;
+  }
+  @include respond-to("sm") {
+    padding-top: 30px;
+    font-size: 28px;
+  }
+}
+
+.title_white {
+  color: $main-bright-color;
+  &::before {
+    background: $main-bright-color;
+  }
+}
+
+.content-what-we-do {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 150px;
+  &:last-child {
+    margin-top: 200px;
+    .image {
+      order: 2;
+    }
+  }
+  @include respond-to("lg") {
+    margin-top: 80px;
+    flex-direction: column;
+    &:last-child {
+      margin-top: 75px;
+      .image {
+        order: 0;
+      }
+    }
+  }
+  @include respond-to("md") {
+    margin-top: 50px;
+  }
+}
+
+.image {
+  width: 55%;
+  opacity: 0;
+  transition: 0.65s ease-in;
+  @include respond-to("lg") {
+    width: 80%;
+  }
+}
+
+.img-first {
+  transform: translate(-30%, -30%);
+  transition: 0.65s ease-in;
+}
+
+.img-second {
+  transform: translate(30%, -30%);
+  transition: 0.65s ease-in;
+}
+
+.img-showing {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.text-description-block {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  &__subtitle {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: $main-dark-color;
+  }
+  &__title {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 44px;
+    text-transform: uppercase;
+    color: $main-dark-color;
+  }
+  &__text {
+    font-family: "OpenSans";
+    font-size: 18px;
+    line-height: 1.46;
+    color: #4b5562;
+  }
+  &__btn {
+    margin-top: 27px;
+  }
+  &__location {
+    margin-top: 60px;
+    font-family: "OpenSans";
+    font-size: 18px;
+    font-style: italic;
+    color: $main-dark-color;
+    i {
+      letter-spacing: 10px;
+    }
+  }
+  @include respond-to("lg") {
+    margin-top: 30px;
+    width: 80%;
+    &__subtitle {
+      font-size: 18px;
+    }
+    &__title {
+      font-size: 38px;
+    }
+  }
+  @include respond-to("md") {
+    &__subtitle {
+      font-size: 15px;
+    }
+    &__title {
+      font-size: 32px;
+    }
+    &__text {
+      font-size: 15px;
+    }
+    &__location {
+      font-size: 14px;
+    }
+  }
+}
+
+.button {
+  width: 190px;
+  font-size: 14px;
+  line-height: 3.25;
+  text-align: center;
+  text-transform: uppercase;
+  color: $main-dark-color;
+  border: 1px solid $main-dark-color;
+  transition: 0.3s ease-in;
+  &:hover {
+    background: $main-dark-color;
+    color: $main-bright-color;
+  }
+  @include respond-to("md") {
+    width: 125px;
+    line-height: 2.5;
+    font-size: 12px;
+  }
+}
+
+// =================================== LATEST NEWS =========================== \\
+
+.latest-news {
+  background: linear-gradient(to top, #3c7fd4, #24ccfa);
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url("../img/latest-news-bg.png") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 2;
+  }
+}
+
+.latest-news-inner {
+  padding: 140px 0 209px;
+  position: relative;
+  z-index: 3;
+  @include respond-to("sm") {
+    padding: 70px 0 90px 0;
+  }
+}
+
+.news-block {
+  margin-top: 100px;
+  position: relative;
+  // display: flex;
+  // justify-content: space-between;
+
+  @include respond-to("sm") {
+    margin-top: 50px;
+  }
+}
+
+.separate-news {
+  display: flex;
+  flex-direction: column;
+  margin: 0 12px;
+  flex-basis: 31%;
+  height: 525px;
+  background: $main-bright-color;
+  position: relative;
+  &__img {
+    width: 100%;
+    height: 45%;
+  }
+  &__block {
+    padding: 30px 30px 30px 20px;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    color: $main-dark-color;
+  }
+  &__text {
+    margin-top: 20px;
+    font-family: "OpenSans", sans-serif;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    line-height: 21px;
+    color: #4b5562;
+  }
+  &__author {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 30px;
+  }
+  &__photo {
+    border-radius: 50px;
+  }
+  &__author-name-block {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__name {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $main-dark-color;
+  }
+  &__date {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #55b7ff;
+  }
+  @include respond-to("xl") {
+    &__title {
+      font-size: 19px;
+    }
+    &__text {
+      font-size: 15px;
+    }
+    &__photo {
+      width: 40px;
+    }
+    &__name {
+      font-size: 15px;
+    }
+  }
+  @include respond-to("lg") {
+    &__title {
+      font-size: 23px;
+    }
+    &__text {
+      font-size: 17px;
+    }
+    &__photo {
+      width: 45px;
+    }
+    &__name {
+      font-size: 17px;
+    }
+  }
+  @include respond-to("sm") {
+    &__title {
+      font-size: 15px;
+    }
+    &__text {
+      font-size: 14px;
+    }
+    &__photo {
+      width: 40px;
+    }
+    &__name {
+      font-size: 13px;
+    }
+  }
+
+}
+
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+}
+/* Стрелка */
+.news-block .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-125%);
+  z-index: 4;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.news-block .slick-arrow:focus {
+  outline: none;
+}
+/* Стрелка влево */
+.news-block .slick-arrow.slick-prev {
+  left: -10%;
+  background: url("../img/chevron-left-solid.svg") 0 0 no-repeat;
+  background-size: 25%;
+  background-position: center;
+}
+/* Стрелка вправо */
+.news-block .slick-arrow.slick-next {
+  right: -10%;
+  background: url("../img/chevron-right-solid.svg") 0 0 no-repeat;
+  background-size: 25%;
+  background-position: center;
+}
+/* Точки (булиты) */
+.news-block .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+}
+.news-block .slick-dots li {
+  margin: 60px 15px 0;
+  width: 8px;
+  height: 8px;
+  border: 1px solid $main-bright-color;
+  border-radius: 50px;
+  cursor: pointer;
+  background: none;
+}
+/* Активная точка */
+.news-block .slick-dots li.slick-active {
+  background: $main-bright-color;
+}
+/* Элемент точки */
+.news-block .slick-dots li button {
+  font-size: 0;
+  border: none;
+  background: none;
+}
+
+.news-block .slick-dots li button:focus {
+  outline: none;
+}
+
+// =============================== GALLERY =============================== \\
+
+.gallery-inner {
+  padding: 140px 0;
+  &__btn {
+    display: block;
+    margin: 60px auto 0;
+  }
+}
+
+.pictures {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  height: 400px;
+  @include respond-to("lg") {
+    margin-top: 50px;
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
+  }
+}
+
+.left-picture {
+  background: url("../img/gallery-1.png") no-repeat center;
+  background-size: cover;
+  width: 50%;
+  opacity: 0;
+  @include respond-to("lg") {
+    width: 75%;
+    height: 300px;
+  }
+  @include respond-to("sm") {
+    height: 150px;
+  }
+}
+
+.visible {
+  opacity: 1;
+}
+
+.right-pictures {
+  margin-left: 10px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  @include respond-to("lg") {
+    margin-top: 10px;
+    margin-left: 0;
+    width: 75%;
+    height: 300px;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    height: 50%;
+    width: 100%;
+  }
+  &__bottom {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 50%;
+    width: 100%;
+  }
+  &__first-img {
+    width: 50%;
+    background: url("../img/gallery-2.png") no-repeat center;
+    background-size: cover;
+    opacity: 0;
+    transform: translate(-20%, -20%);
+    &_visible {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+  &__second-img {
+    width: 50%;
+    margin-left: 10px;
+    background: url("../img/gallery-3.png") no-repeat center;
+    background-size: cover;
+    opacity: 0;
+    transform: translate(20%, -20%);
+    &_visible {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+  &__third-img {
+    width: 50%;
+    background: url("../img/gallery-4.png") no-repeat center;
+    background-size: cover;
+    opacity: 0;
+    transform: translate(-20%, 20%);
+    &_visible {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+  &__fourth-img {
+    width: 50%;
+    margin-left: 10px;
+    background: url("../img/gallery-5.png") no-repeat center;
+    background-size: cover;
+    opacity: 0;
+    transform: translate(20%, 20%);
+    &_visible {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+  @include respond-to("sm") {
+    &__first-img {
+      width: 100%;
+    }
+    &__second-img {
+      display: none;
+    }
+    &__third-img {
+      display: none;
+    }
+    &__fourth-img {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+}
+
+.pic {
+  transition: 0.5s ease-in;
+  cursor: pointer;
+  &-left {
+    transition: 2s ease-in;
+  }
+}
+
+// =============================== MAP =============================== \\
+
+#map {
+  position: relative;
+  width: 100%;
+  height: 700px;
+}
+
+// =============================== GET IN TOUCH =============================== \\
+
+.get-in-touch {
+  position: absolute;
+  z-index: 4;
+  background: rgba($color: $main-bright-color, $alpha: 0.92);
+  width: 48%;
+  padding: 60px 60px 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 370px;
+  @include respond-to("lg") {
+    bottom: 250px;
+  }
+}
+
+.contact {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  @include respond-to("lg") {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  &__icon {
+    color: #7e5aff;
+    letter-spacing: 10px;
+  }
+  &__item {
+    font-size: 18px;
+    color: $main-dark-color;
+    &:nth-child(n + 2) {
+      margin-top: 25px;
+    }
+  }
+  @include respond-to("lg") {
+    &__item {
+      font-size: 15px;
+    }
+  }
+  @include respond-to("sm") {
+    &__item {
+      font-size: 12px;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  &__input {
+    padding-left: 0;
+    font-size: 18px;
+    color: $main-dark-color;
+    border: none;
+    border-bottom: 1px solid $main-dark-color;
+    background: rgba($color: $main-bright-color, $alpha: 0);
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: rgba(75, 85, 98, 0.5);
+    }
+    &:nth-child(2) {
+      margin-top: 25px;
+    }
+  }
+  &__btn {
+    cursor: pointer;
+    width: 45%;
+    margin-top: 30px;
+    align-self: flex-end;
+    background: rgba($color: $main-bright-color, $alpha: 0);
+  }
+  @include respond-to("lg") {
+    margin-top: 40px;
+    width: 75%;
+  }
+  @include respond-to("sm") {
+    width: 90%;
+    &__btn {
+      width: 60%;
+    }
+  }
+}
+
+// =============================== FOOTER =============================== \\
+
+.footer {
+  background: linear-gradient(to top, #55b7ff, #7e5aff);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 524px;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url("../img/footer-bg.png") no-repeat center;
+    background-attachment: fixed;
+    z-index: 2;
+  }
+}
+
+.footer-inner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-inner .social-icons {
+  @include respond-to("md") {
+    margin-top: 20px;
+  }
+}
+
+.footer-content {
+  position: relative;
+  z-index: 3;
+  width: 77%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  @include respond-to("lg") {
+    padding-top: 230px;
+  }
+  @include respond-to("md") {
+    flex-direction: column;
+  }
+}
+
+.logo-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  &__text {
+    margin-top: 42px;
+    display: flex;
+    font-size: 14px;
+    color: $main-bright-color;
+  }
+  &__info:first-child {
+    margin-right: 20px;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      right: -20px;
+      width: 1px;
+      height: 100%;
+      background: $main-bright-color;
+    }
+  }
+  &__info:last-child {
+    margin-left: 20px;
+  }
+  @include respond-to("sm") {
+    &__info:first-child {
+      margin-right: 20px;
+      position: relative;
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
