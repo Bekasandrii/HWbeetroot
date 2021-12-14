@@ -102,6 +102,7 @@ $(() => {
             $(".menu__link-contact").addClass("menu__link_checked");
         }
     });
+
 //=========================== Header slider ============================\\
 
     $(document).ready(function () {
@@ -191,6 +192,14 @@ $(() => {
                 }
             );
             return false;
+        });
+    });
+
+    $(document).ready(function () {
+        //Convert address tags to google map links - Michael Jasper 2012
+        $('address').each(function () {
+            let link = "<a href='http://maps.google.com/maps?q=" + encodeURIComponent( $(this).text() ) + "' target='_blank'>" + $(this).text() + "</a>";
+            $(this).html(link);
         });
     });
 

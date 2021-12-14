@@ -881,6 +881,10 @@ body {
   padding: 12px 0;
 }
 
+.logo {
+  cursor: pointer;
+}
+
 .menu {
   margin-left: 30px;
   display: -webkit-box;

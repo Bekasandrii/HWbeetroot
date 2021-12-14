@@ -46,6 +46,7 @@ body {
 }
 
 .logo {
+  cursor: pointer;
   @include respond-to("xl") {
     width: 200px;
   }
