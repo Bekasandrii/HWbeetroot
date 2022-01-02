@@ -36,6 +36,15 @@ $(() => {
         }
     });
 
+    // Address Links
+
+    $(document).ready(function () {
+        //Convert address tags to google map links - Michael Jasper 2012
+        $('address').each(function () {
+            let link = "<a href='http://maps.google.com/maps?q=" + encodeURIComponent( $(this).text() ) + "' target='_blank'>" + $(this).text() + "</a>";
+            $(this).html(link);
+        });
+    });
 
     //=========================== Pics in Gallery ============================\\
 
@@ -195,13 +204,7 @@ $(() => {
         });
     });
 
-    $(document).ready(function () {
-        //Convert address tags to google map links - Michael Jasper 2012
-        $('address').each(function () {
-            let link = "<a href='http://maps.google.com/maps?q=" + encodeURIComponent( $(this).text() ) + "' target='_blank'>" + $(this).text() + "</a>";
-            $(this).html(link);
-        });
-    });
+
 
     $(".burger-menu__button").click(() => {
         if ($(".menu").hasClass("menu_visible")) {
