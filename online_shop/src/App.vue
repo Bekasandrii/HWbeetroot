@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    
+    <v-main-wrapper />
   </div>
 </template>
 
 <script>
-
+  import vMainWrapper from './components/v-main-wrapper'
 
 export default {
   name: 'App',
   components: {
-   
+    vMainWrapper
   }
 }
 </script>
@@ -22,6 +22,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 160px;
 }
 </style>
