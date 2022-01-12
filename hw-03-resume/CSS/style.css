@@ -18,7 +18,7 @@ body {
   padding: 100px 90px;
 }
 
-.maine-content-title {
+.main-content-title {
   font-style: normal;
   font-style: bold;
   font-size: 22px;
@@ -61,22 +61,23 @@ body {
 
 /* My projects section */
 
-.my-projects-section {
-  margin-bottom: 50px;
+.my-projects-section{
+  
 }
 
 .my-projects-list {
   padding: 0 0 0 15px;
+  
 }
 .my-projects-item {
-  color: #000;
-  font-weight: bold;
+  
 }
 .my-projects-link {
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
-  color: blue;
+  color: #fb6d3a;
+  font-weight: bold;
 }
 .my-projects-text {
   font-style: normal;

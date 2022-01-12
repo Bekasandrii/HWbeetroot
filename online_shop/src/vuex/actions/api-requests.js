@@ -10,12 +10,11 @@ export default {
                 return products;
             })
             .catch((error) => {
-                console.log("test1")
-                console.log(error);
-                console.log("test2")
-
+                console.log(error)
                 return error;
             })
-    }
-
+    },
 }
+
+
+

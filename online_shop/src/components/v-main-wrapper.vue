@@ -1,52 +1,40 @@
 <template>
   <div class="v-main-wrapper">
-<!--    Сохраняем состояние при изменении url-->
+    <v-header />
+    <v-footer />
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
-
-<!--    <v-catalog />-->
-<!--    <v-cart-->
-<!--        v-if="CART.length"-->
-<!--        :cart_data="CART"-->
-<!--    />-->
   </div>
 </template>
 
 <script>
-// import vCatalog from './v-catalog'
-// import vCart from './v-cart'
-// import {mapGetters} from 'vuex'
+import vHeader from './layouts/v-header'
+import vFooter from './layouts/v-footer'
+
 
 export default {
   name: 'v-main-wrapper',
-  // components: {
-  //   vCatalog,
-  //   vCart,
-  // },
+  components: {
+    vHeader,
+    vFooter
+  },
   props: {},
   data() {
     return {
       title: 'Main wrapper'
     }
   },
-  computed: {
-    // ...mapGetters([
-    //     'CART'
-    // ])
-  },
+  computed: {},
   methods: {},
-  watch: {},
-  // mounted() {
-  //   console.log('Hello i am alive!')
-  // }
+  watch: {}
 }
 </script>
 
 <style>
-  .v-main-wrapper {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
+.v-main-wrapper {
+  margin: 0 auto;
+}
 </style>
+
+
