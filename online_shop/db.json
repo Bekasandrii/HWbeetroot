@@ -2,24 +2,24 @@
   "products": [
     {
       "image": "1.jpeg",
-      "name": "shirt",
-      "price": 400,
-      "article": "T1",
-      "available": true,
-      "category": "Мужские"
-    },
-    {
-      "image": "2.jpeg",
       "name": "dress",
-      "price": 800,
-      "article": "T2",
+      "price": 600,
+      "article": "T1",
       "available": true,
       "category": "Женские"
     },
     {
+      "image": "2.jpeg",
+      "name": "trousers",
+      "price": 800,
+      "article": "T2",
+      "available": true,
+      "category": "Мужские"
+    },
+    {
       "image": "3.jpeg",
       "name": "dress",
-      "price": 750,
+      "price": 600,
       "article": "T3",
       "available": false,
       "category": "Женские"
@@ -27,7 +27,7 @@
     {
       "image": "4.jpeg",
       "name": "shirt",
-      "price": 450,
+      "price": 350,
       "article": "T4",
       "available": true,
       "category": "Мужские"
@@ -35,7 +35,7 @@
     {
       "image": "5.jpeg",
       "name": "dress",
-      "price": 600,
+      "price": 750,
       "article": "T5",
       "available": false,
       "category": "Женские"
@@ -64,5 +64,6 @@
       "available": false,
       "category": "Женские"
     }
+
   ]
 }

@@ -18,6 +18,7 @@
       <p>{{cartTotalCost | toFix | formattedPrice}}</p>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -84,10 +85,10 @@ export default {
 .v-cart {
   margin-bottom: 100px;
   &__total {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    //position: fixed;
+    //bottom: 0;
+    //right: 0;
+    //left: 0;
     padding: $padding*2 $padding*3;
     display: flex;
     justify-content: center;

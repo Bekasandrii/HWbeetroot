@@ -72,7 +72,7 @@ export default {
   margin-bottom: 100px;
 }
 .title {
-  border: solid 1px #aeaeae;
+  border: solid 1px #1596ac;
   padding: 8px;
   text-align: center;
 }
@@ -80,9 +80,9 @@ export default {
   margin: 0;
 }
 .options {
-  border: solid 1px #aeaeae;
+  border: solid 1px #1596ac;
   position: absolute;
-  top: 35px;
+  top: 38px;
   right: 0;
   width: 100%;
   padding: 8px;

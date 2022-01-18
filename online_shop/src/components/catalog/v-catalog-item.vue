@@ -10,16 +10,18 @@
     >
       <img class="v-catalog-item__image" :src=" require('../../assets/images/' + product_data.image) " alt="img">
       <div>
-        <p class="v-catalog-item__name">{{product_data.name}}</p>
-        <p class="v-catalog-item__price">Price: {{product_data.price | toFix | formattedPrice}}</p>
-        <p class="v-catalog-item__category">{{product_data.category}}</p>
+        <p class="v-catalog-item__name">{{ product_data.name }}</p>
+        <p class="v-catalog-item__price">Price: {{ product_data.price | toFix | formattedPrice }}</p>
+        <p class="v-catalog-item__category">{{ product_data.category }}</p>
       </div>
     </v-popup>
 
-
-    <img class="v-catalog-item__image" :src=" require('../../assets/images/' + product_data.image) " alt="img" @click="productClick">
-    <p class="v-catalog-item__name">{{product_data.name}}</p>
-    <p class="v-catalog-item__name">Price: {{product_data.price | toFix | formattedPrice}}</p>
+    <div class="v-catalog-item__image-container">
+      <img class="v-catalog-item__image" :src=" require('../../assets/images/' + product_data.image) " alt="img"
+           @click="productClick">
+    </div>
+    <p class="v-catalog-item__name">{{ product_data.name }}</p>
+    <p class="v-catalog-item__name">Price: {{ product_data.price | toFix | formattedPrice }}</p>
     <button
         class="v-catalog-item__show-info"
         @click="showPopupInfo"
@@ -39,6 +41,7 @@
 import vPopup from '../popup/v-popup'
 import toFix from '../../filters/toFix'
 import formattedPrice from "../../filters/price-format";
+
 export default {
   name: "v-catalog-item",
   components: {
@@ -84,12 +87,33 @@ export default {
 
 <style lang="scss">
 .v-catalog-item {
+  //display: flex;
+  //flex-direction: column;
   flex-basis: 25%;
   box-shadow: 0 0 8px 0 #e0e0e0;
-  padding: $padding*2;
-  margin-bottom: $margin*2;
+  padding: 16px;
+  &__name {
+    font-weight: bold;
+  }
+  &__image-container {
+
+  }
   &__image {
-    width: 100px;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__show-info {
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__add_to_cart_btn {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
   }
 }
 </style>

@@ -1,10 +1,11 @@
 <template>
   <div class="v-main-wrapper">
     <v-header />
-    <v-footer />
+
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
+    <v-footer></v-footer>
   </div>
 </template>
 
@@ -22,18 +23,20 @@ export default {
   props: {},
   data() {
     return {
-      title: 'Main wrapper'
+      title: 'Main wrapper',
     }
   },
   computed: {},
-  methods: {},
-  watch: {}
+
+  watch: {},
 }
 </script>
 
 <style>
 .v-main-wrapper {
   margin: 0 auto;
+  padding-bottom: 90px;
+  /*max-width: 900px;*/
 }
 </style>
 

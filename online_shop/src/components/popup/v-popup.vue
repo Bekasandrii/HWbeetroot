@@ -82,20 +82,22 @@ export default {
 .v-popup {
   padding: 16px;
   position: fixed;
-  top: 50px;
+  top: 150px;
   width: 400px;
   background: #ffffff;
   box-shadow: 0 0 17px 0 #e7e7e7;
   z-index: 10;
+
   &__header, &__footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   &__content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    //display: flex;
+    //justify-content: center;
+    //align-items: center;
+
   }
   .submit_btn {
     padding: 8px;
@@ -107,5 +109,9 @@ export default {
     color: #ffffff;
     background: red;
   }
+  .material-icons {
+    cursor: pointer;
+  }
+
 }
 </style>

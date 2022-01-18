@@ -13,6 +13,7 @@
           :selected="selected"
           :options="categories"
           @select="sortByCategories"
+          :isExpanded="IS_DESKTOP"
       />
       <div class="range-slider">
         <input
@@ -164,14 +165,14 @@ export default {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    //align-items: center;
   }
   &__link_to_cart {
     position: fixed;
-    top: 100px;
-    right: 10px;
+    top: 160px;
+    right: 20px;
     padding: $padding*2;
-    border: solid 1px #aeaeae;
+    border: solid 1px #1596ac;
     background: #ffffff;
   }
 }
@@ -182,22 +183,23 @@ export default {
 }
 .range-slider {
   width: 250px;
-  //margin: auto 16px;
   text-align: center;
   position: relative;
+
+
 
 }
 .range-slider svg, .range-slider input[type=range] {
   position: absolute;
   left: 0;
   bottom: 0;
+
 }
 input[type=range]::-webkit-slider-thumb {
   z-index: 2;
   position: relative;
   top: 2px;
   margin-top: -7px;
-
 }
 </style>
 
