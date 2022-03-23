@@ -51,7 +51,7 @@ body {
 }
 
 .about-me-description {
-  width: 400px;
+  width: 650px;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -61,16 +61,8 @@ body {
 
 /* My projects section */
 
-.my-projects-section{
-  
-}
-
 .my-projects-list {
   padding: 0 0 0 15px;
-  
-}
-.my-projects-item {
-  
 }
 .my-projects-link {
   font-style: normal;
@@ -164,7 +156,6 @@ body {
 
 /* Sidebar section */
 
-
 .sidebar-section {
   background: #1e2939;
   width: 370px;
@@ -173,7 +164,6 @@ body {
 .profile-img {
   width: 129%;
   height: 453px;
-
 }
 .contacts-section,
 .tech-skills-section,
@@ -207,7 +197,6 @@ a {
   text-decoration: none;
 }
 
-
 /* tech skills section */
 
 .tech-skills-list,
@@ -231,5 +220,3 @@ a {
   line-height: 24px;
   color: #fff;
 }
-
-
