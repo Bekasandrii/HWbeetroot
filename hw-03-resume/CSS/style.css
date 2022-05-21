@@ -77,12 +77,14 @@ body {
 
 .my-work-experience-company {
   color: #fb6d3a;
+  padding: 0 65px 0 18px;
+  
 }
 
 .my-work-experience-position {
   font-weight: bold;
   font-size: 16px;
-  margin: 0 0 10px 0;
+  margin: 0 60px 10px 0;
 }
 
 .my-work-experience-period {
@@ -96,7 +98,7 @@ body {
 }
 
 .my-work-experience-duties {
-  padding: 0 0 0 18px;
+  padding: 0 65px 0 18px;
 }
 .my-work-experience-duty {
   font-size: 14px;
@@ -104,7 +106,7 @@ body {
 }
 
 .my-work-experience-company-block {
-  margin: 0 15px 0 0;
+  margin: 0 70px 0 0;
 }
 /* Education section */
 .my-education-header {
